@@ -7,6 +7,7 @@ use GuzzleHttp\Client;
 class Main
 {
 
+	// 経路探索
 	public function path()
 	{
 		$client = new Client([
@@ -14,8 +15,23 @@ class Main
 			'timeout'  => 2.0,
 		]);
 
-		$str = 'search/course/extreme?key='.KEY.'&viaList=20288:20210&date=20160603&time=0830&searchType=arrival&language=jp';
-		$response = $client->request('GET', $str);
+		$via_list = '20288:20211';
+		$date = '20160603';
+		$time = '0830';
+
+		$str
+			=
+			'search/course/extreme';
+		$param = [
+			'query' => [
+				'key' => KEY,
+				'viaList' => $via_list,
+				'date' => $date,
+				'time' => $time,
+				'language' => 'jp',
+			],
+		];
+		$response = $client->request('GET', $str, $param);
 		echo $response->getBody();
 	}
 
