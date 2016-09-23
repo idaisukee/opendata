@@ -15,7 +15,7 @@ class Main
 			'timeout'  => 2.0,
 		]);
 
-		$via_list = '20288:20211';
+		$via_list = '887673:887754';
 		$date = '20160603';
 		$time = '0830';
 
@@ -32,9 +32,30 @@ class Main
 			],
 		];
 		$response = $client->request('GET', $str, $param);
-		echo $response->getBody();
+		return $response->getBody();
 	}
 
-}
-Main::path();
 
+
+	public function station($name)
+	{
+		$client = new Client([
+			'base_uri' => 'http://api.ekispert.jp/v1/json/',
+			'timeout'  => 2.0,
+		]);
+
+		$str = 'station';
+
+		$param = [
+			'query' => [
+				'key' => KEY,
+				'name' => $name,
+				'language' => 'jp',
+			],
+		];
+		$response = $client->request('GET', $str, $param);
+		return $response->getBody();
+	}
+}
+ Main::path();
+ Main::station('岩成不動');
