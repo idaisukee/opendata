@@ -52,7 +52,6 @@ class Main
 		];
 		$response = $client->request('GET', $str, $param);
 		$json = $response->getBody();
-		return $json;
 	}
 
 
