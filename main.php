@@ -56,6 +56,33 @@ class Main
 		$response = $client->request('GET', $str, $param);
 		return $response->getBody();
 	}
+
+
+
+	public function stationCode($name)
+	{
+		$json = self::station($name);
+		$obj = json_decode($json, false);
+		if ($obj->ResultSet->max === '1') {
+			$code = $obj->ResultSet->Point->Station->code;
+			return $code;
+		} else {
+			return 'many';
+		}
+	}
+
+
+
+	public function stationNumber($name)
+	{
+		$json = self::station($name);
+		$obj = json_decode($json, false);
+		$number = $obj->ResultSet->max;
+		return $number;
+	}
+
 }
  Main::path();
- Main::station('岩成不動');
+ Main::stationNumber('城東町');
+ Main::station('城東町');
+echo  Main::stationCode('');
