@@ -37,6 +37,26 @@ class Main
 
 
 
+	public function stationCand($geo_point)
+	{
+		$client = new Client([
+			'base_uri' => 'http://api.ekispert.jp/v1/json/',
+			'timeout'  => 2.0,
+		]);
+		$str = 'geo/station';
+		$param = [
+			'query' => [
+				'key' => KEY,
+				'geoPoint' => $geo_point,
+			]
+		];
+		$response = $client->request('GET', $str, $param);
+		$json = $response->getBody();
+		return $json;
+	}
+
+
+
 	public function station($name)
 	{
 		$client = new Client([
@@ -81,8 +101,9 @@ class Main
 		return $number;
 	}
 
+
+
 }
- Main::path();
- Main::stationNumber('城東町');
- Main::station('城東町');
-echo  Main::stationCode('');
+//echo Main::stationCand('35.6783055555556,139.770441666667,00');
+$koyamachi = '34.972937,138.384326,tokyo,1000';
+echo Main::Stationcand($koyamachi);
