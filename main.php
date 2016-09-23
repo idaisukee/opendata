@@ -3,6 +3,7 @@
 require 'vendor/autoload.php';
 require 'const.php';
 use GuzzleHttp\Client;
+use Underscore\Types\Arrays as _;
 
 class Main
 {
