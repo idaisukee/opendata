@@ -52,7 +52,22 @@ class Main
 			]
 		];
 		$response = $client->request('GET', $str, $param);
-		$json = $response->getBody();
+		return $response->getBody();
+	}
+
+
+
+	public function stationCandList($geo_point)
+	{
+		$json = self::stationCand($geo_point);
+		$ar = json_decode($json, true);
+		$points = $ar['ResultSet']['Point'];
+		$list = [];
+		foreach ($points as $k => $point) {
+			array_push($list, $point['Station']['code']);
+		}
+		return $list;
+		//		return $list;
 	}
 
 
@@ -104,6 +119,12 @@ class Main
 
 
 }
-//echo Main::stationCand('35.6783055555556,139.770441666667,00');
-$koyamachi = '34.972937,138.384326,tokyo,1000';
-echo Main::Stationcand($koyamachi);
+//echo Main::stationCand('35.6783055555556,139.770441666667,00');h
+$koyamachi = '34.972937,138.384326,tokyo,300';
+$p = Main::path();
+//echo $p;
+//print_r($p);
+$a = json_decode($p, false);
+print_r( $a);
+//echo json_decode(Main::stationCand($koyamachi), false);
+//print_r(Main::stationCandList($koyamachi));
