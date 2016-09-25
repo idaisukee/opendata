@@ -69,7 +69,6 @@ class Main
 			array_push($list, $point['Station']['code']);
 		}
 		return $list;
-		//		return $list;
 	}
 
 
