@@ -30,17 +30,12 @@ class Main
 	// get json
 
 	// 経路探索
-	public function path()
+	public function path($via_list, $date, $time)
 	{
 		$client = new Client([
 			'base_uri' => 'http://api.ekispert.jp/v1/json/',
 			'timeout'  => 2.0,
 		]);
-
-		$via_list = '887673:887754';
-		$date = '20160603';
-		$time = '0830';
-
 		$str
 			=
 			'search/course/extreme';
