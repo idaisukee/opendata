@@ -5,6 +5,25 @@ require 'const.php';
 use GuzzleHttp\Client;
 use Underscore\Types\Arrays as _;
 
+
+
+class Util
+{
+	public function direct_product($array1, $array2)
+	{
+		$prod = [];
+		$k = 0;
+		foreach ($array1 as $a => $b) {
+			foreach ($array2 as $c => $d) {
+				$cell =  [$b, $d];
+				$prod[$k] = $cell;
+				$k++;
+			}
+		}
+		return $prod;
+	}
+}
+
 class Main
 {
 
