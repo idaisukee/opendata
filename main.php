@@ -81,6 +81,10 @@ class Main
 
 
 
+	// not get json
+
+
+
 	public function stationCandList($geo_point)
 	{
 		$json = self::stationCand($geo_point);
