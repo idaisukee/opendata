@@ -8,6 +8,8 @@ use Underscore\Types\Arrays as _;
 class Main
 {
 
+	// get json
+
 	// 経路探索
 	public function path()
 	{
