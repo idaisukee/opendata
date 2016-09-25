@@ -99,7 +99,10 @@ class Main
 
 
 
-
+	public function paths($depart_list, $dest_list)
+	{
+		
+	}
 
 
 	public function stationCode($name)
