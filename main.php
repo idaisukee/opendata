@@ -146,7 +146,17 @@ class Main
 }
 //echo Main::stationCand('35.6783055555556,139.770441666667,00');h
 $koyamachi = '34.972937,138.384326,tokyo,300';
-$p = Main::path();
+
+$via_list = '887673:887754';
+$date = '20160603';
+$time = '0830';
+
+
+$a = [1, 2, 3];
+$b = [8, 9, 0];
+$c = Util::direct_product($a, $b);
+print_r($c);
+//$p = Main::path($via_list, $date, $time);
 //echo $p;
 //print_r($p);
 $a = json_decode($p, false);
