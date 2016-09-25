@@ -40,6 +40,28 @@ class Main
 
 
 
+	public function station($name)
+	{
+		$client = new Client([
+			'base_uri' => 'http://api.ekispert.jp/v1/json/',
+			'timeout'  => 2.0,
+		]);
+
+		$str = 'station';
+
+		$param = [
+			'query' => [
+				'key' => KEY,
+				'name' => $name,
+				'language' => 'jp',
+			],
+		];
+		$response = $client->request('GET', $str, $param);
+		return $response->getBody();
+	}
+
+
+
 	public function stationCand($geo_point)
 	{
 		$client = new Client([
@@ -73,25 +95,6 @@ class Main
 
 
 
-	public function station($name)
-	{
-		$client = new Client([
-			'base_uri' => 'http://api.ekispert.jp/v1/json/',
-			'timeout'  => 2.0,
-		]);
-
-		$str = 'station';
-
-		$param = [
-			'query' => [
-				'key' => KEY,
-				'name' => $name,
-				'language' => 'jp',
-			],
-		];
-		$response = $client->request('GET', $str, $param);
-		return $response->getBody();
-	}
 
 
 
