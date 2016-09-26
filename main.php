@@ -113,14 +113,17 @@ class Main
 
 
 
-	public function paths($depart_list, $dest_list)
+	public function paths($depart_list, $dest_list, $date, $time)
 	{
 		$prod = Util::direct_product($depart_list, $dest_list);
 		$paths = [];
 		foreach ($prod as $k => $cell) {
 			$via_list = implode($cell, ':');
-			echo $via_list;
+			$path_json = self::path($via_list, $date, $time);
+			$path_obj = json_decode($path_json, false);
+			$paths[$k] = $path_obj;
 		}
+		return $paths;
 	}
 
 
@@ -157,15 +160,23 @@ $date = '20160603';
 $time = '0830';
 
 
-$a = [1, 2, 3];
-$b = [8, 9, 0];
-$c = Util::direct_product($a, $b);
+//$a = [1, 2, 3];
+//$b = [8, 9, 0];
+
+$o = '23634';
+$d = '887544';
+$p = Main::path($via_list, $date, $time);
+$ob = json_decode($p, false);
+print_r($ob);
+
+$a = [23634, 887673];
+$b = [888033, 887544];
+
+//$c = Util::direct_product($a, $b);
 //print_r($c);
-$e = Main::paths($a, $b);
-print_r($e);
-//$p = Main::path($via_list, $date, $time);
+$e = Main::paths($a, $b, $date, $time);
+//print_r($e);
 //echo $p;
-//print_r($p);
 //$a = json_decode($p, false);
 //print_r( $a);
 //echo json_decode(Main::stationCand($koyamachi), false);
