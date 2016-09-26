@@ -115,7 +115,12 @@ class Main
 
 	public function paths($depart_list, $dest_list)
 	{
-		
+		$prod = Util::direct_product($depart_list, $dest_list);
+		$paths = [];
+		foreach ($prod as $k => $cell) {
+			$via_list = implode($cell, ':');
+			echo $via_list;
+		}
 	}
 
 
@@ -155,11 +160,13 @@ $time = '0830';
 $a = [1, 2, 3];
 $b = [8, 9, 0];
 $c = Util::direct_product($a, $b);
-print_r($c);
+//print_r($c);
+$e = Main::paths($a, $b);
+print_r($e);
 //$p = Main::path($via_list, $date, $time);
 //echo $p;
 //print_r($p);
-$a = json_decode($p, false);
-print_r( $a);
+//$a = json_decode($p, false);
+//print_r( $a);
 //echo json_decode(Main::stationCand($koyamachi), false);
 //print_r(Main::stationCandList($koyamachi));
