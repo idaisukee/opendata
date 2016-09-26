@@ -186,7 +186,7 @@ class Main
 		return $out;
 	}
 }
-//echo Main::stationCand('35.6783055555556,139.770441666667,00');h
+//echo Main::stationCand('35.6783055555556,139.770441666667,00');
 $koyamachi = '34.972937,138.384326,tokyo,300';
 
 $via_list = '887668:887754';
