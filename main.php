@@ -151,11 +151,38 @@ class Main
 
 
 
+	public function trimPath($path_obj)
+	{
+		$courses = $path_obj->ResultSet->Course;
+		$out = [];
+		foreach ($courses as $i => $course) {
+			$price = $course->Price[0]->Oneway;
+			$time_other = $course->Route->timeOther;
+			$time_on_board = $course->Route->timeOnBoard;
+			$lines = $course->Route->Line;
+			$out_lines = [];
+			foreach ($lines as $j => $line) {
+				$name = $line->Name;
+				$arrival_datetime = $line->ArrivalState->Datetime->text;
+				$departure_datetime = $line->DepartureState->Datetime->text;
+				$out_lines[$j] = [$name, $arrival_datetime, $departure_datetime];
+			}
+			$points = $course->Route->Point;
+			$out_points = [];
+			foreach ($points as $k => $point) {
+				$point_name = $point->Station->Name;
+				$out_points[$k] = $point_name;
+			}
+			$out[$i] = [$price, $time_other, $time_on_board, $out_lines, $out_points];
+		}
+		return $out;
+		// return $courses;
+	}
 }
 //echo Main::stationCand('35.6783055555556,139.770441666667,00');h
 $koyamachi = '34.972937,138.384326,tokyo,300';
 
-$via_list = '887673:887754';
+$via_list = '887668:887754';
 $date = '20160603';
 $time = '0830';
 
@@ -163,18 +190,19 @@ $time = '0830';
 //$a = [1, 2, 3];
 //$b = [8, 9, 0];
 
-$o = '23634';
+$o = '23636';
 $d = '887544';
 $p = Main::path($via_list, $date, $time);
 $ob = json_decode($p, false);
-print_r($ob);
-
+//print_r($ob);
+$tp = Main::trimPath($ob);
+print_r($tp);
 $a = [23634, 887673];
 $b = [888033, 887544];
 
 //$c = Util::direct_product($a, $b);
 //print_r($c);
-$e = Main::paths($a, $b, $date, $time);
+//$e = Main::paths($a, $b, $date, $time);
 //print_r($e);
 //echo $p;
 //$a = json_decode($p, false);
