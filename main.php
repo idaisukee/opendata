@@ -135,7 +135,7 @@ class Main
 	{
 		$json = self::stationCand($geo_point);
 		$ar = json_decode($json, true);
-		$points = $ar['ResultSet']['Point'];
+		$the_points = $ar['ResultSet']['Point'];
 		$list = [];
 		foreach ($points as $k => $point) {
 			array_push($list, $point['Station']['code']);
@@ -191,23 +191,30 @@ class Main
 			$price = $course->Price[0]->Oneway;
 			$time_other = $course->Route->timeOther;
 			$time_on_board = $course->Route->timeOnBoard;
-			$lines = $course->Route->Line;
+			$the_line = $course->Route->Line;
+			$lines_num = count($the_line);
+			if (1 === $lines_num) {
+				$lines = [$the_line];
+			} else {
+				$lines = $the_line;
+			}
 			$out_lines = [];
 			foreach ($lines as $j => $line) {
 				$name = $line->Name;
 				$arrival_datetime = $line->ArrivalState->Datetime->text;
 				$departure_datetime = $line->DepartureState->Datetime->text;
 				$out_lines[$j] = [$name, $arrival_datetime, $departure_datetime];
+				$points = $course->Route->Point;
+				$out_points = [];
+				foreach ($points as $k => $point) {
+					$point_name = $point->Station->Name;
+					$out_points[$k] = $point_name;
+				}
+				$out[$i] = [$price, $time_other, $time_on_board, $out_lines, $out_points];
 			}
-			$points = $course->Route->Point;
-			$out_points = [];
-			foreach ($points as $k => $point) {
-				$point_name = $point->Station->Name;
-				$out_points[$k] = $point_name;
-			}
-			$out[$i] = [$price, $time_other, $time_on_board, $out_lines, $out_points];
 		}
 		return $out;
+
 		// return $courses;
 	}
 
