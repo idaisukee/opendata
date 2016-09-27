@@ -26,9 +26,9 @@ class Util
 class Main
 {
 
-	public function main($lat, $long)
+	public function main($lat, $long, $radius)
 	{
-		$geo_point = self::geoPoint($lat, $long);
+		$geo_point = self::geoPoint($lat, $long, $radius);
 	}
 
 
