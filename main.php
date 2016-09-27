@@ -188,10 +188,9 @@ class Main
 
 
 
-	public function trimStationCand($geo_point)
+	public function trimStationCand($station_cand)
 	{
-		$station_cand_json = self::stationCand($geo_point);
-		$station_cand_obj = json_decode($station_cand_json, false);
+		$station_cand_obj = json_decode($station_cand, false);
 		$points = $station_cand_obj->ResultSet->Point;
 		$out = [];
 		foreach ($points as $i => $point) {
