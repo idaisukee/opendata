@@ -1,0 +1,1925 @@
+-*- mode: compilation; default-directory: "~/prd/src/opendata/" -*-
+Compilation started at Sat Sep 24 16:42:17
+
+php main.php
+stdClass Object
+(
+    [ResultSet] => stdClass Object
+        (
+            [apiVersion] => 1.27.0.0
+            [engineVersion] => 201609_04a
+            [Course] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [searchType] => departure
+                            [dataType] => onTimetable
+                            [SerializeData] => VkV4QaEByALDAqYBM6GIA6YBM6GHBJHCAUMIAdsCpgEzoSEDyQEBAgEDAQQBBwEIAQoCD0L_fxCl__cFlcECpgANi3nBAqYADZKwwQKmAA2LysECpgANiyHBAqYADYu8BpLDAQICBgPCAQQEpQHKwwECAgYDwgEDBKUB4geSxAGmATOgWwOlAgcEpQILBQDFAaYBM6BbAgEDpQIRBKUCEwUACJLGBAEFAgYBB6TlCAMJeoK1griCxILCg1eDg4NYg2eDiYNDg5OBRYjAk4yPeorCkPwokMOJqol3j3qKwoFFkIWXjpKsifGC6CnHAgEEAgUCBgEHpPEIBAl8grWCuILEgsKDV4ODg1iDZ4OJg0ODk4FFkoaMtJJyg1CSSpD8KJO_j0aJ75VhiUCBfJOCkKOJY4vGj4opCZLBAwHDAQECAQMBD5HFAZMAAQICksMBAAIAAwDDAQECAQMBA5LDAQACAAMAwwEBAgEDAQSSAAEFkgAA--T3221233232319:F3321122120:A23121141:--0f4fa95246dbe84e7312eabb3a615bf984e06dc5--0--0--0--372
+                            [Price] => Array
+                                (
+                                    [0] => stdClass Object
+                                        (
+                                            [kind] => FareSummary
+                                            [Oneway] => 380
+                                            [Round] => 760
+                                        )
+
+                                    [1] => stdClass Object
+                                        (
+                                            [fareRevisionStatus] => none
+                                            [toLineIndex] => 1
+                                            [fromLineIndex] => 1
+                                            [kind] => Fare
+                                            [index] => 1
+                                            [selected] => true
+                                            [Type] => Fare
+                                            [Oneway] => 190
+                                            [Round] => 380
+                                        )
+
+                                    [2] => stdClass Object
+                                        (
+                                            [fareRevisionStatus] => none
+                                            [toLineIndex] => 2
+                                            [fromLineIndex] => 2
+                                            [kind] => Fare
+                                            [index] => 2
+                                            [selected] => true
+                                            [Type] => Fare
+                                            [Oneway] => 190
+                                            [Round] => 380
+                                        )
+
+                                    [3] => stdClass Object
+                                        (
+                                            [kind] => Teiki1Summary
+                                            [Oneway] => 15960
+                                        )
+
+                                    [4] => stdClass Object
+                                        (
+                                            [fareRevisionStatus] => none
+                                            [toLineIndex] => 1
+                                            [fromLineIndex] => 1
+                                            [kind] => Teiki1
+                                            [index] => 1
+                                            [selected] => true
+                                            [Type] => Teiki1
+                                            [Oneway] => 7980
+                                        )
+
+                                    [5] => stdClass Object
+                                        (
+                                            [fareRevisionStatus] => none
+                                            [toLineIndex] => 2
+                                            [fromLineIndex] => 2
+                                            [kind] => Teiki1
+                                            [index] => 2
+                                            [selected] => true
+                                            [Type] => Teiki1
+                                            [Oneway] => 7980
+                                        )
+
+                                    [6] => stdClass Object
+                                        (
+                                            [kind] => Teiki3Summary
+                                            [Oneway] => 45480
+                                        )
+
+                                    [7] => stdClass Object
+                                        (
+                                            [fareRevisionStatus] => none
+                                            [toLineIndex] => 1
+                                            [fromLineIndex] => 1
+                                            [kind] => Teiki3
+                                            [index] => 1
+                                            [selected] => true
+                                            [Type] => Teiki3
+                                            [Oneway] => 22740
+                                        )
+
+                                    [8] => stdClass Object
+                                        (
+                                            [fareRevisionStatus] => none
+                                            [toLineIndex] => 2
+                                            [fromLineIndex] => 2
+                                            [kind] => Teiki3
+                                            [index] => 2
+                                            [selected] => true
+                                            [Type] => Teiki3
+                                            [Oneway] => 22740
+                                        )
+
+                                    [9] => stdClass Object
+                                        (
+                                            [kind] => Teiki6Summary
+                                            [Oneway] => 86180
+                                        )
+
+                                    [10] => stdClass Object
+                                        (
+                                            [fareRevisionStatus] => none
+                                            [toLineIndex] => 1
+                                            [fromLineIndex] => 1
+                                            [kind] => Teiki6
+                                            [index] => 1
+                                            [selected] => true
+                                            [Type] => Teiki6
+                                            [Oneway] => 43090
+                                        )
+
+                                    [11] => stdClass Object
+                                        (
+                                            [fareRevisionStatus] => none
+                                            [toLineIndex] => 2
+                                            [fromLineIndex] => 2
+                                            [kind] => Teiki6
+                                            [index] => 2
+                                            [selected] => true
+                                            [Type] => Teiki6
+                                            [Oneway] => 43090
+                                        )
+
+                                )
+
+                            [Route] => stdClass Object
+                                (
+                                    [timeOther] => 6
+                                    [timeOnBoard] => 6
+                                    [exhaustCO2] => 90
+                                    [exhaustCO2atPassengerCar] => 252
+                                    [distance] => 15
+                                    [timeWalk] => 0
+                                    [transferCount] => 1
+                                    [Line] => Array
+                                        (
+                                            [0] => stdClass Object
+                                                (
+                                                    [stopStationCount] => 2
+                                                    [teiki3Index] => 1
+                                                    [teiki6Index] => 1
+                                                    [timeOnBoard] => 4
+                                                    [exhaustCO2] => 48
+                                                    [fareIndex] => 1
+                                                    [exhaustCO2atPassengerCar] => 134
+                                                    [distance] => 8
+                                                    [teiki1Index] => 1
+                                                    [Name] => しずてつジャストライン・安東循環線(静岡駅循環・水落町回り)
+                                                    [Type] => stdClass Object
+                                                        (
+                                                            [text] => bus
+                                                            [detail] => local
+                                                        )
+
+                                                    [ArrivalState] => stdClass Object
+                                                        (
+                                                            [Type] => normal
+                                                            [Datetime] => stdClass Object
+                                                                (
+                                                                    [text] => 2016-06-03T08:43:00+09:00
+                                                                    [operation] => today
+                                                                )
+
+                                                        )
+
+                                                    [Destination] => 静岡駅前／しずてつジャストライン
+                                                    [TypicalName] => しずてつジャストライン・安東循環線(静岡駅循環・水落町回り)
+                                                    [TimeReliability] => onTimetable
+                                                    [DepartureState] => stdClass Object
+                                                        (
+                                                            [Type] => normal
+                                                            [Datetime] => stdClass Object
+                                                                (
+                                                                    [text] => 2016-06-03T08:39:00+09:00
+                                                                    [operation] => today
+                                                                )
+
+                                                        )
+
+                                                    [Color] => 000102221
+                                                )
+
+                                            [1] => stdClass Object
+                                                (
+                                                    [stopStationCount] => 1
+                                                    [teiki3Index] => 2
+                                                    [teiki6Index] => 2
+                                                    [timeOnBoard] => 2
+                                                    [exhaustCO2] => 42
+                                                    [fareIndex] => 2
+                                                    [exhaustCO2atPassengerCar] => 117
+                                                    [distance] => 7
+                                                    [teiki1Index] => 2
+                                                    [Name] => しずてつジャストライン・中原池ケ谷線(徳洲会病院－唐瀬営業所)・唐瀬営業所行
+                                                    [Type] => stdClass Object
+                                                        (
+                                                            [text] => bus
+                                                            [detail] => local
+                                                        )
+
+                                                    [ArrivalState] => stdClass Object
+                                                        (
+                                                            [Type] => normal
+                                                            [Datetime] => stdClass Object
+                                                                (
+                                                                    [text] => 2016-06-03T08:51:00+09:00
+                                                                    [operation] => today
+                                                                )
+
+                                                        )
+
+                                                    [Destination] => 唐瀬営業所／しずてつジャストライン
+                                                    [TypicalName] => しずてつジャストライン・中原池ケ谷線(徳洲会病院－唐瀬営業所)
+                                                    [TimeReliability] => onTimetable
+                                                    [DepartureState] => stdClass Object
+                                                        (
+                                                            [Type] => normal
+                                                            [Datetime] => stdClass Object
+                                                                (
+                                                                    [text] => 2016-06-03T08:49:00+09:00
+                                                                    [operation] => today
+                                                                )
+
+                                                        )
+
+                                                    [Color] => 000102221
+                                                )
+
+                                        )
+
+                                    [Point] => Array
+                                        (
+                                            [0] => stdClass Object
+                                                (
+                                                    [Station] => stdClass Object
+                                                        (
+                                                            [code] => 887673
+                                                            [Name] => 岩成不動／しずてつジャストライン
+                                                            [Type] => stdClass Object
+                                                                (
+                                                                    [text] => bus
+                                                                    [detail] => local
+                                                                )
+
+                                                            [Yomi] => いわなりふどう
+                                                        )
+
+                                                    [Prefecture] => stdClass Object
+                                                        (
+                                                            [code] => 22
+                                                            [Name] => 静岡県
+                                                        )
+
+                                                    [GeoPoint] => stdClass Object
+                                                        (
+                                                            [longi] => 138.23.21.16
+                                                            [lati] => 34.59.13.59
+                                                            [longi_d] => 138.389213
+                                                            [gcs] => tokyo
+                                                            [lati_d] => 34.98711
+                                                        )
+
+                                                )
+
+                                            [1] => stdClass Object
+                                                (
+                                                    [Station] => stdClass Object
+                                                        (
+                                                            [code] => 889520
+                                                            [Name] => 臨済寺前／しずてつジャストライン
+                                                            [Type] => stdClass Object
+                                                                (
+                                                                    [text] => bus
+                                                                    [detail] => local
+                                                                )
+
+                                                            [Yomi] => りんさいじまえ
+                                                        )
+
+                                                    [Prefecture] => stdClass Object
+                                                        (
+                                                            [code] => 22
+                                                            [Name] => 静岡県
+                                                        )
+
+                                                    [GeoPoint] => stdClass Object
+                                                        (
+                                                            [longi] => 138.22.50.16
+                                                            [lati] => 34.59.14.41
+                                                            [longi_d] => 138.380602
+                                                            [gcs] => tokyo
+                                                            [lati_d] => 34.987338
+                                                        )
+
+                                                )
+
+                                            [2] => stdClass Object
+                                                (
+                                                    [Station] => stdClass Object
+                                                        (
+                                                            [code] => 887754
+                                                            [Name] => 大在家／しずてつジャストライン
+                                                            [Type] => stdClass Object
+                                                                (
+                                                                    [text] => bus
+                                                                    [detail] => local
+                                                                )
+
+                                                            [Yomi] => おおざいけ
+                                                        )
+
+                                                    [Prefecture] => stdClass Object
+                                                        (
+                                                            [code] => 22
+                                                            [Name] => 静岡県
+                                                        )
+
+                                                    [GeoPoint] => stdClass Object
+                                                        (
+                                                            [longi] => 138.22.57.2
+                                                            [lati] => 34.59.33.42
+                                                            [longi_d] => 138.382508
+                                                            [gcs] => tokyo
+                                                            [lati_d] => 34.992619
+                                                        )
+
+                                                )
+
+                                        )
+
+                                )
+
+                        )
+
+                    [1] => stdClass Object
+                        (
+                            [searchType] => departure
+                            [dataType] => onTimetable
+                            [SerializeData] => VkV4QaEByALDAqYBM6GIA6YBM6GHBJHCAUMIAdsCpgEzoSEDyQEBAgEDAQQBBwEIAQoCD0L_fxCl__cFlcECpgANi3nBAqYADZAqwQKmAA2LysECpgANiyLBAqYADZJaBpLDAQICBgPCAQUEpQHUwwECAgYDwgEEBKUB4geSxAGmATOgWwOlAgIEpQIOBQDFAaYBM6BbAgEDpQIWBKUCIAUACJLGBAEFAgYBB6TqCAMJfoK1griCxILCg1eDg4NYg2eDiYNDg5OBRYynl6eVYYlAjYKPvJD8KIynl6eVYYlAgXyDUoFbg3aDXoNFg5MpxwIBBAIFAgYBB6TxCAQJfIK1griCxILCg1eDg4NYg2eDiYNDg5OBRZKGjLSScoNQkkqQ_CiTv49Gie|VYYlAgXyTgpCjiWOLxo|KKQmSwQMBwwEBAgEDAQ|RxQGTAAECApLDAQACAAMAwwEBAgEDAQOSwwEAAgADAMMBAQIBAwEEkgABBZIAAA**--T3221233232319:F3321122120:A23121141:--b92547d6851104722fa7d01352e66fc5eaed25ad--0--0--0--376
+                            [Price] => Array
+                                (
+                                    [0] => stdClass Object
+                                        (
+                                            [kind] => FareSummary
+                                            [Oneway] => 380
+                                            [Round] => 760
+                                        )
+
+                                    [1] => stdClass Object
+                                        (
+                                            [fareRevisionStatus] => none
+                                            [toLineIndex] => 1
+                                            [fromLineIndex] => 1
+                                            [kind] => Fare
+                                            [index] => 1
+                                            [selected] => true
+                                            [Type] => Fare
+                                            [Oneway] => 190
+                                            [Round] => 380
+                                        )
+
+                                    [2] => stdClass Object
+                                        (
+                                            [fareRevisionStatus] => none
+                                            [toLineIndex] => 2
+                                            [fromLineIndex] => 2
+                                            [kind] => Fare
+                                            [index] => 2
+                                            [selected] => true
+                                            [Type] => Fare
+                                            [Oneway] => 190
+                                            [Round] => 380
+                                        )
+
+                                    [3] => stdClass Object
+                                        (
+                                            [kind] => Teiki1Summary
+                                            [Oneway] => 15960
+                                        )
+
+                                    [4] => stdClass Object
+                                        (
+                                            [fareRevisionStatus] => none
+                                            [toLineIndex] => 1
+                                            [fromLineIndex] => 1
+                                            [kind] => Teiki1
+                                            [index] => 1
+                                            [selected] => true
+                                            [Type] => Teiki1
+                                            [Oneway] => 7980
+                                        )
+
+                                    [5] => stdClass Object
+                                        (
+                                            [fareRevisionStatus] => none
+                                            [toLineIndex] => 2
+                                            [fromLineIndex] => 2
+                                            [kind] => Teiki1
+                                            [index] => 2
+                                            [selected] => true
+                                            [Type] => Teiki1
+                                            [Oneway] => 7980
+                                        )
+
+                                    [6] => stdClass Object
+                                        (
+                                            [kind] => Teiki3Summary
+                                            [Oneway] => 45480
+                                        )
+
+                                    [7] => stdClass Object
+                                        (
+                                            [fareRevisionStatus] => none
+                                            [toLineIndex] => 1
+                                            [fromLineIndex] => 1
+                                            [kind] => Teiki3
+                                            [index] => 1
+                                            [selected] => true
+                                            [Type] => Teiki3
+                                            [Oneway] => 22740
+                                        )
+
+                                    [8] => stdClass Object
+                                        (
+                                            [fareRevisionStatus] => none
+                                            [toLineIndex] => 2
+                                            [fromLineIndex] => 2
+                                            [kind] => Teiki3
+                                            [index] => 2
+                                            [selected] => true
+                                            [Type] => Teiki3
+                                            [Oneway] => 22740
+                                        )
+
+                                    [9] => stdClass Object
+                                        (
+                                            [kind] => Teiki6Summary
+                                            [Oneway] => 86180
+                                        )
+
+                                    [10] => stdClass Object
+                                        (
+                                            [fareRevisionStatus] => none
+                                            [toLineIndex] => 1
+                                            [fromLineIndex] => 1
+                                            [kind] => Teiki6
+                                            [index] => 1
+                                            [selected] => true
+                                            [Type] => Teiki6
+                                            [Oneway] => 43090
+                                        )
+
+                                    [11] => stdClass Object
+                                        (
+                                            [fareRevisionStatus] => none
+                                            [toLineIndex] => 2
+                                            [fromLineIndex] => 2
+                                            [kind] => Teiki6
+                                            [index] => 2
+                                            [selected] => true
+                                            [Type] => Teiki6
+                                            [Oneway] => 43090
+                                        )
+
+                                )
+
+                            [Route] => stdClass Object
+                                (
+                                    [timeOther] => 8
+                                    [timeOnBoard] => 22
+                                    [exhaustCO2] => 276
+                                    [exhaustCO2atPassengerCar] => 772
+                                    [distance] => 46
+                                    [timeWalk] => 0
+                                    [transferCount] => 1
+                                    [Line] => Array
+                                        (
+                                            [0] => stdClass Object
+                                                (
+                                                    [stopStationCount] => 5
+                                                    [teiki3Index] => 1
+                                                    [teiki6Index] => 1
+                                                    [timeOnBoard] => 12
+                                                    [exhaustCO2] => 126
+                                                    [fareIndex] => 1
+                                                    [exhaustCO2atPassengerCar] => 352
+                                                    [distance] => 21
+                                                    [teiki1Index] => 1
+                                                    [Name] => しずてつジャストライン・県立病院高松線(県立病院－コープタウン)・登呂コープタウン行
+                                                    [Type] => stdClass Object
+                                                        (
+                                                            [text] => bus
+                                                            [detail] => local
+                                                        )
+
+                                                    [ArrivalState] => stdClass Object
+                                                        (
+                                                            [Type] => normal
+                                                            [Datetime] => stdClass Object
+                                                                (
+                                                                    [text] => 2016-06-03T08:46:00+09:00
+                                                                    [operation] => today
+                                                                )
+
+                                                        )
+
+                                                    [Destination] => 登呂コープタウン／しずてつジャストライン
+                                                    [TypicalName] => しずてつジャストライン・県立病院高松線(県立病院－コープタウン)
+                                                    [TimeReliability] => onTimetable
+                                                    [DepartureState] => stdClass Object
+                                                        (
+                                                            [Type] => normal
+                                                            [Datetime] => stdClass Object
+                                                                (
+                                                                    [text] => 2016-06-03T08:34:00+09:00
+                                                                    [operation] => today
+                                                                )
+
+                                                        )
+
+                                                    [Color] => 000102221
+                                                )
+
+                                            [1] => stdClass Object
+                                                (
+                                                    [stopStationCount] => 7
+                                                    [teiki3Index] => 2
+                                                    [teiki6Index] => 2
+                                                    [timeOnBoard] => 10
+                                                    [exhaustCO2] => 150
+                                                    [fareIndex] => 2
+                                                    [exhaustCO2atPassengerCar] => 420
+                                                    [distance] => 25
+                                                    [teiki1Index] => 2
+                                                    [Name] => しずてつジャストライン・中原池ケ谷線(徳洲会病院－唐瀬営業所)・唐瀬営業所行
+                                                    [Type] => stdClass Object
+                                                        (
+                                                            [text] => bus
+                                                            [detail] => local
+                                                        )
+
+                                                    [ArrivalState] => stdClass Object
+                                                        (
+                                                            [Type] => normal
+                                                            [Datetime] => stdClass Object
+                                                                (
+                                                                    [text] => 2016-06-03T09:04:00+09:00
+                                                                    [operation] => today
+                                                                )
+
+                                                        )
+
+                                                    [Destination] => 唐瀬営業所／しずてつジャストライン
+                                                    [TypicalName] => しずてつジャストライン・中原池ケ谷線(徳洲会病院－唐瀬営業所)
+                                                    [TimeReliability] => onTimetable
+                                                    [DepartureState] => stdClass Object
+                                                        (
+                                                            [Type] => normal
+                                                            [Datetime] => stdClass Object
+                                                                (
+                                                                    [text] => 2016-06-03T08:54:00+09:00
+                                                                    [operation] => today
+                                                                )
+
+                                                        )
+
+                                                    [Color] => 000102221
+                                                )
+
+                                        )
+
+                                    [Point] => Array
+                                        (
+                                            [0] => stdClass Object
+                                                (
+                                                    [Station] => stdClass Object
+                                                        (
+                                                            [code] => 887673
+                                                            [Name] => 岩成不動／しずてつジャストライン
+                                                            [Type] => stdClass Object
+                                                                (
+                                                                    [text] => bus
+                                                                    [detail] => local
+                                                                )
+
+                                                            [Yomi] => いわなりふどう
+                                                        )
+
+                                                    [Prefecture] => stdClass Object
+                                                        (
+                                                            [code] => 22
+                                                            [Name] => 静岡県
+                                                        )
+
+                                                    [GeoPoint] => stdClass Object
+                                                        (
+                                                            [longi] => 138.23.21.16
+                                                            [lati] => 34.59.13.59
+                                                            [longi_d] => 138.389213
+                                                            [gcs] => tokyo
+                                                            [lati_d] => 34.98711
+                                                        )
+
+                                                )
+
+                                            [1] => stdClass Object
+                                                (
+                                                    [Station] => stdClass Object
+                                                        (
+                                                            [code] => 888874
+                                                            [Name] => 中町／しずてつジャストライン
+                                                            [Type] => stdClass Object
+                                                                (
+                                                                    [text] => bus
+                                                                    [detail] => local
+                                                                )
+
+                                                            [Yomi] => なかちょう
+                                                        )
+
+                                                    [Prefecture] => stdClass Object
+                                                        (
+                                                            [code] => 22
+                                                            [Name] => 静岡県
+                                                        )
+
+                                                    [GeoPoint] => stdClass Object
+                                                        (
+                                                            [longi] => 138.22.56.95
+                                                            [lati] => 34.58.26.25
+                                                            [longi_d] => 138.382488
+                                                            [gcs] => tokyo
+                                                            [lati_d] => 34.973961
+                                                        )
+
+                                                )
+
+                                            [2] => stdClass Object
+                                                (
+                                                    [Station] => stdClass Object
+                                                        (
+                                                            [code] => 887754
+                                                            [Name] => 大在家／しずてつジャストライン
+                                                            [Type] => stdClass Object
+                                                                (
+                                                                    [text] => bus
+                                                                    [detail] => local
+                                                                )
+
+                                                            [Yomi] => おおざいけ
+                                                        )
+
+                                                    [Prefecture] => stdClass Object
+                                                        (
+                                                            [code] => 22
+                                                            [Name] => 静岡県
+                                                        )
+
+                                                    [GeoPoint] => stdClass Object
+                                                        (
+                                                            [longi] => 138.22.57.2
+                                                            [lati] => 34.59.33.42
+                                                            [longi_d] => 138.382508
+                                                            [gcs] => tokyo
+                                                            [lati_d] => 34.992619
+                                                        )
+
+                                                )
+
+                                        )
+
+                                )
+
+                        )
+
+                    [2] => stdClass Object
+                        (
+                            [searchType] => departure
+                            [dataType] => onTimetable
+                            [SerializeData] => VkV4QaEByALDAqYBM6GIA6YBM6GHBJHCAUMIAdsCpgEzoSEDyQEBAgEDAQQBBwEIAQoCD0L_fxCl__cFl8ECpgANi3nBAqYADY1TwQKmAA2MvsECpgANi8rBAqYADY|GwQKmAA2Sx8ECpgANjL0Gk8MBAgIGA8IBCgSlAdXDAQICBgPCAQMEpQHuwwECAgYDwgELBKUB4weTxAGmATOgWwOlAgQEpQIRBQDFAaYBM6BbAgEDpQIXBKUCGQUAxQGmATOgWwICA6UCIgSlAigFAAiTxgQBBQIGAgek6ggECX6CtYK4gsSCwoNXg4ODWINng4mDQ4OTgUWMp5enlWGJQI2Cj7yQ_CiMp5enlWGJQIF8g1KBW4N2g16DRYOTKccCAQQCBQIGAQek9wgFCXSCtYK4gsSCwoNXg4ODWINng4mDQ4OTgUWTgpCjkPwokMOJqol3kU|BfJOCkKOJY4vGj4opxwICBAMFAgYCB6TxCAYJfIK1griCxILCg1eDg4NYg2eDiYNDg5OBRZKGjLSScoNQkkqQ_CiTv49Gie|VYYlAgXyTgpCjiWOLxo|KKQmTwQMBwwEBAgEDAcMBAgICAwEPkcUBlAABAgMCk8MBAAIAAwDDAQECAQMBwwECAgIDAgOTwwEAAgADAMMBAQIBAwHDAQICAgMCBJMAAQIFkwAAAA**--T3221233232319:F3321122120:A23121141:--eaab5949992dff51a7b1cc6794fc3903127b49ef--0--0--0--514
+                            [Price] => Array
+                                (
+                                    [0] => stdClass Object
+                                        (
+                                            [kind] => FareSummary
+                                            [Oneway] => 550
+                                            [Round] => 1100
+                                        )
+
+                                    [1] => stdClass Object
+                                        (
+                                            [fareRevisionStatus] => none
+                                            [toLineIndex] => 1
+                                            [fromLineIndex] => 1
+                                            [kind] => Fare
+                                            [index] => 1
+                                            [selected] => true
+                                            [Type] => Fare
+                                            [Oneway] => 190
+                                            [Round] => 380
+                                        )
+
+                                    [2] => stdClass Object
+                                        (
+                                            [fareRevisionStatus] => none
+                                            [toLineIndex] => 2
+                                            [fromLineIndex] => 2
+                                            [kind] => Fare
+                                            [index] => 2
+                                            [selected] => true
+                                            [Type] => Fare
+                                            [Oneway] => 170
+                                            [Round] => 340
+                                        )
+
+                                    [3] => stdClass Object
+                                        (
+                                            [fareRevisionStatus] => none
+                                            [toLineIndex] => 3
+                                            [fromLineIndex] => 3
+                                            [kind] => Fare
+                                            [index] => 3
+                                            [selected] => true
+                                            [Type] => Fare
+                                            [Oneway] => 190
+                                            [Round] => 380
+                                        )
+
+                                    [4] => stdClass Object
+                                        (
+                                            [kind] => Teiki1Summary
+                                            [Oneway] => 23100
+                                        )
+
+                                    [5] => stdClass Object
+                                        (
+                                            [fareRevisionStatus] => none
+                                            [toLineIndex] => 1
+                                            [fromLineIndex] => 1
+                                            [kind] => Teiki1
+                                            [index] => 1
+                                            [selected] => true
+                                            [Type] => Teiki1
+                                            [Oneway] => 7980
+                                        )
+
+                                    [6] => stdClass Object
+                                        (
+                                            [fareRevisionStatus] => none
+                                            [toLineIndex] => 2
+                                            [fromLineIndex] => 2
+                                            [kind] => Teiki1
+                                            [index] => 2
+                                            [selected] => true
+                                            [Type] => Teiki1
+                                            [Oneway] => 7140
+                                        )
+
+                                    [7] => stdClass Object
+                                        (
+                                            [fareRevisionStatus] => none
+                                            [toLineIndex] => 3
+                                            [fromLineIndex] => 3
+                                            [kind] => Teiki1
+                                            [index] => 3
+                                            [selected] => true
+                                            [Type] => Teiki1
+                                            [Oneway] => 7980
+                                        )
+
+                                    [8] => stdClass Object
+                                        (
+                                            [kind] => Teiki3Summary
+                                            [Oneway] => 65830
+                                        )
+
+                                    [9] => stdClass Object
+                                        (
+                                            [fareRevisionStatus] => none
+                                            [toLineIndex] => 1
+                                            [fromLineIndex] => 1
+                                            [kind] => Teiki3
+                                            [index] => 1
+                                            [selected] => true
+                                            [Type] => Teiki3
+                                            [Oneway] => 22740
+                                        )
+
+                                    [10] => stdClass Object
+                                        (
+                                            [fareRevisionStatus] => none
+                                            [toLineIndex] => 2
+                                            [fromLineIndex] => 2
+                                            [kind] => Teiki3
+                                            [index] => 2
+                                            [selected] => true
+                                            [Type] => Teiki3
+                                            [Oneway] => 20350
+                                        )
+
+                                    [11] => stdClass Object
+                                        (
+                                            [fareRevisionStatus] => none
+                                            [toLineIndex] => 3
+                                            [fromLineIndex] => 3
+                                            [kind] => Teiki3
+                                            [index] => 3
+                                            [selected] => true
+                                            [Type] => Teiki3
+                                            [Oneway] => 22740
+                                        )
+
+                                    [12] => stdClass Object
+                                        (
+                                            [kind] => Teiki6Summary
+                                            [Oneway] => 124740
+                                        )
+
+                                    [13] => stdClass Object
+                                        (
+                                            [fareRevisionStatus] => none
+                                            [toLineIndex] => 1
+                                            [fromLineIndex] => 1
+                                            [kind] => Teiki6
+                                            [index] => 1
+                                            [selected] => true
+                                            [Type] => Teiki6
+                                            [Oneway] => 43090
+                                        )
+
+                                    [14] => stdClass Object
+                                        (
+                                            [fareRevisionStatus] => none
+                                            [toLineIndex] => 2
+                                            [fromLineIndex] => 2
+                                            [kind] => Teiki6
+                                            [index] => 2
+                                            [selected] => true
+                                            [Type] => Teiki6
+                                            [Oneway] => 38560
+                                        )
+
+                                    [15] => stdClass Object
+                                        (
+                                            [fareRevisionStatus] => none
+                                            [toLineIndex] => 3
+                                            [fromLineIndex] => 3
+                                            [kind] => Teiki6
+                                            [index] => 3
+                                            [selected] => true
+                                            [Type] => Teiki6
+                                            [Oneway] => 43090
+                                        )
+
+                                )
+
+                            [Route] => stdClass Object
+                                (
+                                    [timeOther] => 15
+                                    [timeOnBoard] => 21
+                                    [exhaustCO2] => 264
+                                    [exhaustCO2atPassengerCar] => 739
+                                    [distance] => 44
+                                    [timeWalk] => 0
+                                    [transferCount] => 2
+                                    [Line] => Array
+                                        (
+                                            [0] => stdClass Object
+                                                (
+                                                    [stopStationCount] => 8
+                                                    [teiki3Index] => 1
+                                                    [teiki6Index] => 1
+                                                    [timeOnBoard] => 13
+                                                    [exhaustCO2] => 114
+                                                    [fareIndex] => 1
+                                                    [exhaustCO2atPassengerCar] => 319
+                                                    [distance] => 19
+                                                    [teiki1Index] => 1
+                                                    [Name] => しずてつジャストライン・県立病院高松線(県立病院－コープタウン)・県立総合病院行
+                                                    [Type] => stdClass Object
+                                                        (
+                                                            [text] => bus
+                                                            [detail] => local
+                                                        )
+
+                                                    [ArrivalState] => stdClass Object
+                                                        (
+                                                            [Type] => normal
+                                                            [Datetime] => stdClass Object
+                                                                (
+                                                                    [text] => 2016-06-03T08:49:00+09:00
+                                                                    [operation] => today
+                                                                )
+
+                                                        )
+
+                                                    [Destination] => 県立総合病院／しずてつジャストライン
+                                                    [TypicalName] => しずてつジャストライン・県立病院高松線(県立病院－コープタウン)
+                                                    [TimeReliability] => onTimetable
+                                                    [DepartureState] => stdClass Object
+                                                        (
+                                                            [Type] => normal
+                                                            [Datetime] => stdClass Object
+                                                                (
+                                                                    [text] => 2016-06-03T08:36:00+09:00
+                                                                    [operation] => today
+                                                                )
+
+                                                        )
+
+                                                    [Color] => 000102221
+                                                )
+
+                                            [1] => stdClass Object
+                                                (
+                                                    [stopStationCount] => 1
+                                                    [teiki3Index] => 2
+                                                    [teiki6Index] => 2
+                                                    [timeOnBoard] => 2
+                                                    [exhaustCO2] => 24
+                                                    [fareIndex] => 2
+                                                    [exhaustCO2atPassengerCar] => 67
+                                                    [distance] => 4
+                                                    [teiki1Index] => 2
+                                                    [Name] => しずてつジャストライン・唐瀬線(静岡駅前－唐瀬営業所)・唐瀬営業所行
+                                                    [Type] => stdClass Object
+                                                        (
+                                                            [text] => bus
+                                                            [detail] => local
+                                                        )
+
+                                                    [ArrivalState] => stdClass Object
+                                                        (
+                                                            [Type] => normal
+                                                            [Datetime] => stdClass Object
+                                                                (
+                                                                    [text] => 2016-06-03T08:57:00+09:00
+                                                                    [operation] => today
+                                                                )
+
+                                                        )
+
+                                                    [Destination] => 唐瀬営業所／しずてつジャストライン
+                                                    [TypicalName] => しずてつジャストライン・唐瀬線(静岡駅前－唐瀬営業所)
+                                                    [TimeReliability] => onTimetable
+                                                    [DepartureState] => stdClass Object
+                                                        (
+                                                            [Type] => normal
+                                                            [Datetime] => stdClass Object
+                                                                (
+                                                                    [text] => 2016-06-03T08:55:00+09:00
+                                                                    [operation] => today
+                                                                )
+
+                                                        )
+
+                                                    [Color] => 000102221
+                                                )
+
+                                            [2] => stdClass Object
+                                                (
+                                                    [stopStationCount] => 4
+                                                    [teiki3Index] => 3
+                                                    [teiki6Index] => 3
+                                                    [timeOnBoard] => 6
+                                                    [exhaustCO2] => 126
+                                                    [fareIndex] => 3
+                                                    [exhaustCO2atPassengerCar] => 352
+                                                    [distance] => 21
+                                                    [teiki1Index] => 3
+                                                    [Name] => しずてつジャストライン・中原池ケ谷線(徳洲会病院－唐瀬営業所)・徳洲会病院行
+                                                    [Type] => stdClass Object
+                                                        (
+                                                            [text] => bus
+                                                            [detail] => local
+                                                        )
+
+                                                    [ArrivalState] => stdClass Object
+                                                        (
+                                                            [Type] => normal
+                                                            [Datetime] => stdClass Object
+                                                                (
+                                                                    [text] => 2016-06-03T09:12:00+09:00
+                                                                    [operation] => today
+                                                                )
+
+                                                        )
+
+                                                    [Destination] => 徳洲会病院／しずてつジャストライン
+                                                    [TypicalName] => しずてつジャストライン・中原池ケ谷線(徳洲会病院－唐瀬営業所)
+                                                    [TimeReliability] => onTimetable
+                                                    [DepartureState] => stdClass Object
+                                                        (
+                                                            [Type] => normal
+                                                            [Datetime] => stdClass Object
+                                                                (
+                                                                    [text] => 2016-06-03T09:06:00+09:00
+                                                                    [operation] => today
+                                                                )
+
+                                                        )
+
+                                                    [Color] => 000102221
+                                                )
+
+                                        )
+
+                                    [Point] => Array
+                                        (
+                                            [0] => stdClass Object
+                                                (
+                                                    [Station] => stdClass Object
+                                                        (
+                                                            [code] => 887673
+                                                            [Name] => 岩成不動／しずてつジャストライン
+                                                            [Type] => stdClass Object
+                                                                (
+                                                                    [text] => bus
+                                                                    [detail] => local
+                                                                )
+
+                                                            [Yomi] => いわなりふどう
+                                                        )
+
+                                                    [Prefecture] => stdClass Object
+                                                        (
+                                                            [code] => 22
+                                                            [Name] => 静岡県
+                                                        )
+
+                                                    [GeoPoint] => stdClass Object
+                                                        (
+                                                            [longi] => 138.23.21.16
+                                                            [lati] => 34.59.13.59
+                                                            [longi_d] => 138.389213
+                                                            [gcs] => tokyo
+                                                            [lati_d] => 34.98711
+                                                        )
+
+                                                )
+
+                                            [1] => stdClass Object
+                                                (
+                                                    [Station] => stdClass Object
+                                                        (
+                                                            [code] => 888147
+                                                            [Name] => 県立総合病院入口／しずてつジャストライン
+                                                            [Type] => stdClass Object
+                                                                (
+                                                                    [text] => bus
+                                                                    [detail] => local
+                                                                )
+
+                                                            [Yomi] => けんりつそうごうびょういんいりぐち
+                                                        )
+
+                                                    [Prefecture] => stdClass Object
+                                                        (
+                                                            [code] => 22
+                                                            [Name] => 静岡県
+                                                        )
+
+                                                    [GeoPoint] => stdClass Object
+                                                        (
+                                                            [longi] => 138.23.31.57
+                                                            [lati] => 35.0.6.8
+                                                            [longi_d] => 138.392105
+                                                            [gcs] => tokyo
+                                                            [lati_d] => 35.001692
+                                                        )
+
+                                                )
+
+                                            [2] => stdClass Object
+                                                (
+                                                    [Station] => stdClass Object
+                                                        (
+                                                            [code] => 887998
+                                                            [Name] => 唐瀬入口／しずてつジャストライン
+                                                            [Type] => stdClass Object
+                                                                (
+                                                                    [text] => bus
+                                                                    [detail] => local
+                                                                )
+
+                                                            [Yomi] => からせいりぐち
+                                                        )
+
+                                                    [Prefecture] => stdClass Object
+                                                        (
+                                                            [code] => 22
+                                                            [Name] => 静岡県
+                                                        )
+
+                                                    [GeoPoint] => stdClass Object
+                                                        (
+                                                            [longi] => 138.23.24.95
+                                                            [lati] => 35.0.16.68
+                                                            [longi_d] => 138.390266
+                                                            [gcs] => tokyo
+                                                            [lati_d] => 35.004635
+                                                        )
+
+                                                )
+
+                                            [3] => stdClass Object
+                                                (
+                                                    [Station] => stdClass Object
+                                                        (
+                                                            [code] => 887754
+                                                            [Name] => 大在家／しずてつジャストライン
+                                                            [Type] => stdClass Object
+                                                                (
+                                                                    [text] => bus
+                                                                    [detail] => local
+                                                                )
+
+                                                            [Yomi] => おおざいけ
+                                                        )
+
+                                                    [Prefecture] => stdClass Object
+                                                        (
+                                                            [code] => 22
+                                                            [Name] => 静岡県
+                                                        )
+
+                                                    [GeoPoint] => stdClass Object
+                                                        (
+                                                            [longi] => 138.22.57.2
+                                                            [lati] => 34.59.33.42
+                                                            [longi_d] => 138.382508
+                                                            [gcs] => tokyo
+                                                            [lati_d] => 34.992619
+                                                        )
+
+                                                )
+
+                                        )
+
+                                )
+
+                        )
+
+                    [3] => stdClass Object
+                        (
+                            [searchType] => departure
+                            [dataType] => onTimetable
+                            [SerializeData] => VkV4QaEByALDAqYBM6GIA6YBM6GHBJHCAUMIAdsCpgEzoSEDyQEBAgEDAQQBBwEIAQoCD0L_fxCl__cFlcECpgANi3nBAqYADZAqwQKmAA2LysECpgANiyLBAqYADZJaBpLDAQICBgPCAQYEpQHUwwECAgYDwgEFBKUB4geSxAGmATOgWwOlAgwEpQIYBQDFAaYBM6BbAgEDpQIjBKUCLQUACJLGBAEFAgYBB6TqCAMJfoK1griCxILCg1eDg4NYg2eDiYNDg5OBRYynl6eVYYlAjYKPvJD8KIynl6eVYYlAgXyDUoFbg3aDXoNFg5MpxwIBBAIFAgYBB6TxCAQJfIK1griCxILCg1eDg4NYg2eDiYNDg5OBRZKGjLSScoNQkkqQ_CiTv49Gie|VYYlAgXyTgpCjiWOLxo|KKQmSwQMBwwEBAgEDAQ|RxQGTAAECApLDAQACAAMAwwEBAgEDAQOSwwEAAgADAMMBAQIBAwEEkgABBZIAAA**--T3221233232319:F3321122120:A23121141:--c64aac3f378f8c142b5e4708636b1a3325378430--0--0--0--376
+                            [Price] => Array
+                                (
+                                    [0] => stdClass Object
+                                        (
+                                            [kind] => FareSummary
+                                            [Oneway] => 380
+                                            [Round] => 760
+                                        )
+
+                                    [1] => stdClass Object
+                                        (
+                                            [fareRevisionStatus] => none
+                                            [toLineIndex] => 1
+                                            [fromLineIndex] => 1
+                                            [kind] => Fare
+                                            [index] => 1
+                                            [selected] => true
+                                            [Type] => Fare
+                                            [Oneway] => 190
+                                            [Round] => 380
+                                        )
+
+                                    [2] => stdClass Object
+                                        (
+                                            [fareRevisionStatus] => none
+                                            [toLineIndex] => 2
+                                            [fromLineIndex] => 2
+                                            [kind] => Fare
+                                            [index] => 2
+                                            [selected] => true
+                                            [Type] => Fare
+                                            [Oneway] => 190
+                                            [Round] => 380
+                                        )
+
+                                    [3] => stdClass Object
+                                        (
+                                            [kind] => Teiki1Summary
+                                            [Oneway] => 15960
+                                        )
+
+                                    [4] => stdClass Object
+                                        (
+                                            [fareRevisionStatus] => none
+                                            [toLineIndex] => 1
+                                            [fromLineIndex] => 1
+                                            [kind] => Teiki1
+                                            [index] => 1
+                                            [selected] => true
+                                            [Type] => Teiki1
+                                            [Oneway] => 7980
+                                        )
+
+                                    [5] => stdClass Object
+                                        (
+                                            [fareRevisionStatus] => none
+                                            [toLineIndex] => 2
+                                            [fromLineIndex] => 2
+                                            [kind] => Teiki1
+                                            [index] => 2
+                                            [selected] => true
+                                            [Type] => Teiki1
+                                            [Oneway] => 7980
+                                        )
+
+                                    [6] => stdClass Object
+                                        (
+                                            [kind] => Teiki3Summary
+                                            [Oneway] => 45480
+                                        )
+
+                                    [7] => stdClass Object
+                                        (
+                                            [fareRevisionStatus] => none
+                                            [toLineIndex] => 1
+                                            [fromLineIndex] => 1
+                                            [kind] => Teiki3
+                                            [index] => 1
+                                            [selected] => true
+                                            [Type] => Teiki3
+                                            [Oneway] => 22740
+                                        )
+
+                                    [8] => stdClass Object
+                                        (
+                                            [fareRevisionStatus] => none
+                                            [toLineIndex] => 2
+                                            [fromLineIndex] => 2
+                                            [kind] => Teiki3
+                                            [index] => 2
+                                            [selected] => true
+                                            [Type] => Teiki3
+                                            [Oneway] => 22740
+                                        )
+
+                                    [9] => stdClass Object
+                                        (
+                                            [kind] => Teiki6Summary
+                                            [Oneway] => 86180
+                                        )
+
+                                    [10] => stdClass Object
+                                        (
+                                            [fareRevisionStatus] => none
+                                            [toLineIndex] => 1
+                                            [fromLineIndex] => 1
+                                            [kind] => Teiki6
+                                            [index] => 1
+                                            [selected] => true
+                                            [Type] => Teiki6
+                                            [Oneway] => 43090
+                                        )
+
+                                    [11] => stdClass Object
+                                        (
+                                            [fareRevisionStatus] => none
+                                            [toLineIndex] => 2
+                                            [fromLineIndex] => 2
+                                            [kind] => Teiki6
+                                            [index] => 2
+                                            [selected] => true
+                                            [Type] => Teiki6
+                                            [Oneway] => 43090
+                                        )
+
+                                )
+
+                            [Route] => stdClass Object
+                                (
+                                    [timeOther] => 11
+                                    [timeOnBoard] => 22
+                                    [exhaustCO2] => 276
+                                    [exhaustCO2atPassengerCar] => 772
+                                    [distance] => 46
+                                    [timeWalk] => 0
+                                    [transferCount] => 1
+                                    [Line] => Array
+                                        (
+                                            [0] => stdClass Object
+                                                (
+                                                    [stopStationCount] => 5
+                                                    [teiki3Index] => 1
+                                                    [teiki6Index] => 1
+                                                    [timeOnBoard] => 12
+                                                    [exhaustCO2] => 126
+                                                    [fareIndex] => 1
+                                                    [exhaustCO2atPassengerCar] => 352
+                                                    [distance] => 21
+                                                    [teiki1Index] => 1
+                                                    [Name] => しずてつジャストライン・県立病院高松線(県立病院－コープタウン)・登呂コープタウン行
+                                                    [Type] => stdClass Object
+                                                        (
+                                                            [text] => bus
+                                                            [detail] => local
+                                                        )
+
+                                                    [ArrivalState] => stdClass Object
+                                                        (
+                                                            [Type] => normal
+                                                            [Datetime] => stdClass Object
+                                                                (
+                                                                    [text] => 2016-06-03T08:56:00+09:00
+                                                                    [operation] => today
+                                                                )
+
+                                                        )
+
+                                                    [Destination] => 登呂コープタウン／しずてつジャストライン
+                                                    [TypicalName] => しずてつジャストライン・県立病院高松線(県立病院－コープタウン)
+                                                    [TimeReliability] => onTimetable
+                                                    [DepartureState] => stdClass Object
+                                                        (
+                                                            [Type] => normal
+                                                            [Datetime] => stdClass Object
+                                                                (
+                                                                    [text] => 2016-06-03T08:44:00+09:00
+                                                                    [operation] => today
+                                                                )
+
+                                                        )
+
+                                                    [Color] => 000102221
+                                                )
+
+                                            [1] => stdClass Object
+                                                (
+                                                    [stopStationCount] => 7
+                                                    [teiki3Index] => 2
+                                                    [teiki6Index] => 2
+                                                    [timeOnBoard] => 10
+                                                    [exhaustCO2] => 150
+                                                    [fareIndex] => 2
+                                                    [exhaustCO2atPassengerCar] => 420
+                                                    [distance] => 25
+                                                    [teiki1Index] => 2
+                                                    [Name] => しずてつジャストライン・中原池ケ谷線(徳洲会病院－唐瀬営業所)・唐瀬営業所行
+                                                    [Type] => stdClass Object
+                                                        (
+                                                            [text] => bus
+                                                            [detail] => local
+                                                        )
+
+                                                    [ArrivalState] => stdClass Object
+                                                        (
+                                                            [Type] => normal
+                                                            [Datetime] => stdClass Object
+                                                                (
+                                                                    [text] => 2016-06-03T09:17:00+09:00
+                                                                    [operation] => today
+                                                                )
+
+                                                        )
+
+                                                    [Destination] => 唐瀬営業所／しずてつジャストライン
+                                                    [TypicalName] => しずてつジャストライン・中原池ケ谷線(徳洲会病院－唐瀬営業所)
+                                                    [TimeReliability] => onTimetable
+                                                    [DepartureState] => stdClass Object
+                                                        (
+                                                            [Type] => normal
+                                                            [Datetime] => stdClass Object
+                                                                (
+                                                                    [text] => 2016-06-03T09:07:00+09:00
+                                                                    [operation] => today
+                                                                )
+
+                                                        )
+
+                                                    [Color] => 000102221
+                                                )
+
+                                        )
+
+                                    [Point] => Array
+                                        (
+                                            [0] => stdClass Object
+                                                (
+                                                    [Station] => stdClass Object
+                                                        (
+                                                            [code] => 887673
+                                                            [Name] => 岩成不動／しずてつジャストライン
+                                                            [Type] => stdClass Object
+                                                                (
+                                                                    [text] => bus
+                                                                    [detail] => local
+                                                                )
+
+                                                            [Yomi] => いわなりふどう
+                                                        )
+
+                                                    [Prefecture] => stdClass Object
+                                                        (
+                                                            [code] => 22
+                                                            [Name] => 静岡県
+                                                        )
+
+                                                    [GeoPoint] => stdClass Object
+                                                        (
+                                                            [longi] => 138.23.21.16
+                                                            [lati] => 34.59.13.59
+                                                            [longi_d] => 138.389213
+                                                            [gcs] => tokyo
+                                                            [lati_d] => 34.98711
+                                                        )
+
+                                                )
+
+                                            [1] => stdClass Object
+                                                (
+                                                    [Station] => stdClass Object
+                                                        (
+                                                            [code] => 888874
+                                                            [Name] => 中町／しずてつジャストライン
+                                                            [Type] => stdClass Object
+                                                                (
+                                                                    [text] => bus
+                                                                    [detail] => local
+                                                                )
+
+                                                            [Yomi] => なかちょう
+                                                        )
+
+                                                    [Prefecture] => stdClass Object
+                                                        (
+                                                            [code] => 22
+                                                            [Name] => 静岡県
+                                                        )
+
+                                                    [GeoPoint] => stdClass Object
+                                                        (
+                                                            [longi] => 138.22.56.95
+                                                            [lati] => 34.58.26.25
+                                                            [longi_d] => 138.382488
+                                                            [gcs] => tokyo
+                                                            [lati_d] => 34.973961
+                                                        )
+
+                                                )
+
+                                            [2] => stdClass Object
+                                                (
+                                                    [Station] => stdClass Object
+                                                        (
+                                                            [code] => 887754
+                                                            [Name] => 大在家／しずてつジャストライン
+                                                            [Type] => stdClass Object
+                                                                (
+                                                                    [text] => bus
+                                                                    [detail] => local
+                                                                )
+
+                                                            [Yomi] => おおざいけ
+                                                        )
+
+                                                    [Prefecture] => stdClass Object
+                                                        (
+                                                            [code] => 22
+                                                            [Name] => 静岡県
+                                                        )
+
+                                                    [GeoPoint] => stdClass Object
+                                                        (
+                                                            [longi] => 138.22.57.2
+                                                            [lati] => 34.59.33.42
+                                                            [longi_d] => 138.382508
+                                                            [gcs] => tokyo
+                                                            [lati_d] => 34.992619
+                                                        )
+
+                                                )
+
+                                        )
+
+                                )
+
+                        )
+
+                    [4] => stdClass Object
+                        (
+                            [searchType] => departure
+                            [dataType] => onTimetable
+                            [SerializeData] => VkV4QaEByALDAqYBM6GIA6YBM6GHBJHCAUMIAdsCpgEzoSEDyQEBAgEDAQQBBwEIAQoCD0L_fxCl__cFlsECpgANi3nBAqYADY6swQKmAA2OrcECpgANi8rBAqYADZB2wQKmAA2NUAaTwwECAgYDwgEEBKUBxMMBAwIFA8EBAsMBAgIGA8IBBQSlAeIHk8QBpgEzoFsDpQIIBKUCFgUAxQGmATOgWwIBA6UCFwSlAhsFAMUBpgEzoFsCAgOlAiAEpQItBQAIk8YEAQUCBgEHpOIIBAl6grWCuILEgsKDV4ODg1iDZ4OJg0ODk4FFiMCTjI96isKQ_CiQw4mqiXePeorCgUWShpKskOaJ8YLoKcUCAQQCBQIHAglKk2uV4CiTr4l3KccCAgQDBQIGAQek8QgFCXyCtYK4gsSCwoNXg4ODWINng4mDQ4OTgUWShoy0knKDUJJKkPwok7|PRonvlWGJQIF8k4KQo4lji8aPiikJksEDAcMBAgICAwEPkcUBlAABAgMCk8MBAAIAAwDDAQECAQMBwwECAgIDAgOTwwEAAgADAMMBAQIBAwHDAQICAgMCBJIAAQWSAAA*--T3221233232319:F3321122120:A23121141:--725dda03a8e61a0d51af3c3bee33e200b6a3685b--0--0--0--443
+                            [Price] => Array
+                                (
+                                    [0] => stdClass Object
+                                        (
+                                            [kind] => FareSummary
+                                            [Oneway] => 380
+                                            [Round] => 760
+                                        )
+
+                                    [1] => stdClass Object
+                                        (
+                                            [fareRevisionStatus] => none
+                                            [toLineIndex] => 1
+                                            [fromLineIndex] => 1
+                                            [kind] => Fare
+                                            [index] => 1
+                                            [selected] => true
+                                            [Type] => Fare
+                                            [Oneway] => 190
+                                            [Round] => 380
+                                        )
+
+                                    [2] => stdClass Object
+                                        (
+                                            [fareRevisionStatus] => none
+                                            [toLineIndex] => 3
+                                            [fromLineIndex] => 3
+                                            [kind] => Fare
+                                            [index] => 2
+                                            [selected] => true
+                                            [Type] => Fare
+                                            [Oneway] => 190
+                                            [Round] => 380
+                                        )
+
+                                    [3] => stdClass Object
+                                        (
+                                            [kind] => Teiki1Summary
+                                            [Oneway] => 15960
+                                        )
+
+                                    [4] => stdClass Object
+                                        (
+                                            [fareRevisionStatus] => none
+                                            [toLineIndex] => 1
+                                            [fromLineIndex] => 1
+                                            [kind] => Teiki1
+                                            [index] => 1
+                                            [selected] => true
+                                            [Type] => Teiki1
+                                            [Oneway] => 7980
+                                        )
+
+                                    [5] => stdClass Object
+                                        (
+                                            [fareRevisionStatus] => none
+                                            [toLineIndex] => 3
+                                            [fromLineIndex] => 3
+                                            [kind] => Teiki1
+                                            [index] => 2
+                                            [selected] => true
+                                            [Type] => Teiki1
+                                            [Oneway] => 7980
+                                        )
+
+                                    [6] => stdClass Object
+                                        (
+                                            [kind] => Teiki3Summary
+                                            [Oneway] => 45480
+                                        )
+
+                                    [7] => stdClass Object
+                                        (
+                                            [fareRevisionStatus] => none
+                                            [toLineIndex] => 1
+                                            [fromLineIndex] => 1
+                                            [kind] => Teiki3
+                                            [index] => 1
+                                            [selected] => true
+                                            [Type] => Teiki3
+                                            [Oneway] => 22740
+                                        )
+
+                                    [8] => stdClass Object
+                                        (
+                                            [fareRevisionStatus] => none
+                                            [toLineIndex] => 3
+                                            [fromLineIndex] => 3
+                                            [kind] => Teiki3
+                                            [index] => 2
+                                            [selected] => true
+                                            [Type] => Teiki3
+                                            [Oneway] => 22740
+                                        )
+
+                                    [9] => stdClass Object
+                                        (
+                                            [kind] => Teiki6Summary
+                                            [Oneway] => 86180
+                                        )
+
+                                    [10] => stdClass Object
+                                        (
+                                            [fareRevisionStatus] => none
+                                            [toLineIndex] => 1
+                                            [fromLineIndex] => 1
+                                            [kind] => Teiki6
+                                            [index] => 1
+                                            [selected] => true
+                                            [Type] => Teiki6
+                                            [Oneway] => 43090
+                                        )
+
+                                    [11] => stdClass Object
+                                        (
+                                            [fareRevisionStatus] => none
+                                            [toLineIndex] => 3
+                                            [fromLineIndex] => 3
+                                            [kind] => Teiki6
+                                            [index] => 2
+                                            [selected] => true
+                                            [Type] => Teiki6
+                                            [Oneway] => 43090
+                                        )
+
+                                )
+
+                            [Route] => stdClass Object
+                                (
+                                    [timeOther] => 6
+                                    [timeOnBoard] => 27
+                                    [exhaustCO2] => 336
+                                    [exhaustCO2atPassengerCar] => 940
+                                    [distance] => 56
+                                    [timeWalk] => 4
+                                    [transferCount] => 1
+                                    [Line] => Array
+                                        (
+                                            [0] => stdClass Object
+                                                (
+                                                    [stopStationCount] => 7
+                                                    [teiki3Index] => 1
+                                                    [teiki6Index] => 1
+                                                    [timeOnBoard] => 14
+                                                    [exhaustCO2] => 150
+                                                    [fareIndex] => 1
+                                                    [exhaustCO2atPassengerCar] => 420
+                                                    [distance] => 25
+                                                    [teiki1Index] => 1
+                                                    [Name] => しずてつジャストライン・安東循環線(静岡駅循環・中町先回り)
+                                                    [Type] => stdClass Object
+                                                        (
+                                                            [text] => bus
+                                                            [detail] => local
+                                                        )
+
+                                                    [ArrivalState] => stdClass Object
+                                                        (
+                                                            [Type] => normal
+                                                            [Datetime] => stdClass Object
+                                                                (
+                                                                    [text] => 2016-06-03T08:54:00+09:00
+                                                                    [operation] => today
+                                                                )
+
+                                                        )
+
+                                                    [Destination] => 静岡駅前／しずてつジャストライン
+                                                    [TypicalName] => しずてつジャストライン・安東循環線(静岡駅循環・中町先回り)
+                                                    [TimeReliability] => onTimetable
+                                                    [DepartureState] => stdClass Object
+                                                        (
+                                                            [Type] => normal
+                                                            [Datetime] => stdClass Object
+                                                                (
+                                                                    [text] => 2016-06-03T08:40:00+09:00
+                                                                    [operation] => today
+                                                                )
+
+                                                        )
+
+                                                    [Color] => 000102221
+                                                )
+
+                                            [1] => stdClass Object
+                                                (
+                                                    [stopStationCount] => 0
+                                                    [timeOnBoard] => 4
+                                                    [exhaustCO2] => 0
+                                                    [exhaustCO2atPassengerCar] => 0
+                                                    [distance] => 0
+                                                    [Name] => 徒歩(同駅)
+                                                    [Type] => walk
+                                                    [ArrivalState] => stdClass Object
+                                                        (
+                                                            [Type] => normal
+                                                            [Datetime] => stdClass Object
+                                                                (
+                                                                    [text] => 2016-06-03T08:59:00+09:00
+                                                                    [operation] => today
+                                                                )
+
+                                                        )
+
+                                                    [TypicalName] => 徒歩(同駅)
+                                                    [TimeReliability] => average
+                                                    [DepartureState] => stdClass Object
+                                                        (
+                                                            [Type] => normal
+                                                            [Datetime] => stdClass Object
+                                                                (
+                                                                    [text] => 2016-06-03T08:55:00+09:00
+                                                                    [operation] => today
+                                                                )
+
+                                                        )
+
+                                                    [Color] => 230230230
+                                                )
+
+                                            [2] => stdClass Object
+                                                (
+                                                    [stopStationCount] => 9
+                                                    [teiki3Index] => 2
+                                                    [teiki6Index] => 2
+                                                    [timeOnBoard] => 13
+                                                    [exhaustCO2] => 186
+                                                    [fareIndex] => 2
+                                                    [exhaustCO2atPassengerCar] => 520
+                                                    [distance] => 31
+                                                    [teiki1Index] => 2
+                                                    [Name] => しずてつジャストライン・中原池ケ谷線(徳洲会病院－唐瀬営業所)・唐瀬営業所行
+                                                    [Type] => stdClass Object
+                                                        (
+                                                            [text] => bus
+                                                            [detail] => local
+                                                        )
+
+                                                    [ArrivalState] => stdClass Object
+                                                        (
+                                                            [Type] => normal
+                                                            [Datetime] => stdClass Object
+                                                                (
+                                                                    [text] => 2016-06-03T09:17:00+09:00
+                                                                    [operation] => today
+                                                                )
+
+                                                        )
+
+                                                    [Destination] => 唐瀬営業所／しずてつジャストライン
+                                                    [TypicalName] => しずてつジャストライン・中原池ケ谷線(徳洲会病院－唐瀬営業所)
+                                                    [TimeReliability] => onTimetable
+                                                    [DepartureState] => stdClass Object
+                                                        (
+                                                            [Type] => normal
+                                                            [Datetime] => stdClass Object
+                                                                (
+                                                                    [text] => 2016-06-03T09:04:00+09:00
+                                                                    [operation] => today
+                                                                )
+
+                                                        )
+
+                                                    [Color] => 000102221
+                                                )
+
+                                        )
+
+                                    [Point] => Array
+                                        (
+                                            [0] => stdClass Object
+                                                (
+                                                    [Station] => stdClass Object
+                                                        (
+                                                            [code] => 887673
+                                                            [Name] => 岩成不動／しずてつジャストライン
+                                                            [Type] => stdClass Object
+                                                                (
+                                                                    [text] => bus
+                                                                    [detail] => local
+                                                                )
+
+                                                            [Yomi] => いわなりふどう
+                                                        )
+
+                                                    [Prefecture] => stdClass Object
+                                                        (
+                                                            [code] => 22
+                                                            [Name] => 静岡県
+                                                        )
+
+                                                    [GeoPoint] => stdClass Object
+                                                        (
+                                                            [longi] => 138.23.21.16
+                                                            [lati] => 34.59.13.59
+                                                            [longi_d] => 138.389213
+                                                            [gcs] => tokyo
+                                                            [lati_d] => 34.98711
+                                                        )
+
+                                                )
+
+                                            [1] => stdClass Object
+                                                (
+                                                    [Station] => stdClass Object
+                                                        (
+                                                            [code] => 888492
+                                                            [Name] => 新静岡／しずてつジャストライン
+                                                            [Type] => stdClass Object
+                                                                (
+                                                                    [text] => bus
+                                                                    [detail] => local
+                                                                )
+
+                                                            [Yomi] => しんしずおか
+                                                        )
+
+                                                    [Prefecture] => stdClass Object
+                                                        (
+                                                            [code] => 22
+                                                            [Name] => 静岡県
+                                                        )
+
+                                                    [GeoPoint] => stdClass Object
+                                                        (
+                                                            [longi] => 138.23.20.90
+                                                            [lati] => 34.58.20.25
+                                                            [longi_d] => 138.389141
+                                                            [gcs] => tokyo
+                                                            [lati_d] => 34.972292
+                                                        )
+
+                                                )
+
+                                            [2] => stdClass Object
+                                                (
+                                                    [Station] => stdClass Object
+                                                        (
+                                                            [code] => 888493
+                                                            [Name] => 新静岡(新静岡御幸町)／しずてつジャストライン
+                                                            [Type] => stdClass Object
+                                                                (
+                                                                    [text] => bus
+                                                                    [detail] => local
+                                                                )
+
+                                                            [Yomi] => しんしずおか
+                                                        )
+
+                                                    [Prefecture] => stdClass Object
+                                                        (
+                                                            [code] => 22
+                                                            [Name] => 静岡県
+                                                        )
+
+                                                    [GeoPoint] => stdClass Object
+                                                        (
+                                                            [longi] => 138.23.20.30
+                                                            [lati] => 34.58.16.25
+                                                            [longi_d] => 138.388975
+                                                            [gcs] => tokyo
+                                                            [lati_d] => 34.971181
+                                                        )
+
+                                                )
+
+                                            [3] => stdClass Object
+                                                (
+                                                    [Station] => stdClass Object
+                                                        (
+                                                            [code] => 887754
+                                                            [Name] => 大在家／しずてつジャストライン
+                                                            [Type] => stdClass Object
+                                                                (
+                                                                    [text] => bus
+                                                                    [detail] => local
+                                                                )
+
+                                                            [Yomi] => おおざいけ
+                                                        )
+
+                                                    [Prefecture] => stdClass Object
+                                                        (
+                                                            [code] => 22
+                                                            [Name] => 静岡県
+                                                        )
+
+                                                    [GeoPoint] => stdClass Object
+                                                        (
+                                                            [longi] => 138.22.57.2
+                                                            [lati] => 34.59.33.42
+                                                            [longi_d] => 138.382508
+                                                            [gcs] => tokyo
+                                                            [lati_d] => 34.992619
+                                                        )
+
+                                                )
+
+                                        )
+
+                                )
+
+                        )
+
+                )
+
+            [Feedback] => stdClass Object
+                (
+                    [text] => https://docs.google.com/a/val.co.jp/forms/d/1YNEH6Wghetemg9jwsLx2mZBPqIh5SKOX3IADBR2CNWc/viewform?entry.2033758622=201609_04a
+                    [type] => language
+                )
+
+        )
+
+)
+
+Compilation finished at Sat Sep 24 16:42:18
