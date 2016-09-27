@@ -260,19 +260,24 @@ class Main
 	{
 		$station_cand_obj = json_decode($station_cand, false);
 		$the_point = $station_cand_obj->ResultSet->Point;
-		$points_num = count($the_point);
-		if (1 === $points_num) {
-			$points = [$the_point];
+		if (isset($the_point)) {
+			$points_num = count($the_point);
+			if (1 === $points_num) {
+				$points = [$the_point];
+			} else {
+				$points = $the_point;
+			}
+			$out = [];
+			foreach ($points as $i => $point) {
+				$code = $point->Station->code;
+				$distance = $point->Distance;
+				$out[$i] = [$code, $distance];
+			}
 		} else {
-			$points = $the_point;
+			throw new Exception('cand is null.');
 		}
-		$out = [];
-		foreach ($points as $i => $point) {
-			$code = $point->Station->code;
-			$distance = $point->Distance;
-			$out[$i] = [$code, $distance];
-		}
-		return $out;
+		// return $out;
+		return $station_cand_obj;
 	}
 
 
