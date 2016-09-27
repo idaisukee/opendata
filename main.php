@@ -185,6 +185,22 @@ class Main
 		$out = array_map('self::trimPath', $paths);
 		return $out;
 	}
+
+
+
+	public function trimStationCand($geo_point)
+	{
+		$station_cand_json = self::stationCand($geo_point);
+		$station_cand_obj = json_decode($station_cand_json, false);
+		$points = $station_cand_obj->ResultSet->Point;
+		$out = [];
+		foreach ($points as $i => $point) {
+			$code = $point->Station->code;
+			$distance = $point->Distance;
+			$out[$i] = [$code, $distance];
+		}
+		return $out;
+	}
 }
 //echo Main::stationCand('35.6783055555556,139.770441666667,00');
 $koyamachi = '34.972937,138.384326,tokyo,300';
