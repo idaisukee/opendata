@@ -26,9 +26,11 @@ class Util
 class Main
 {
 
-	public function main($lat, $long, $radius)
+	public function proc($lat, $long, $radius)
 	{
 		$geo_point = self::geoPoint($lat, $long, $radius);
+		$station_cand = self::stationCand($geo_point);
+		return $station_cand;
 	}
 
 
