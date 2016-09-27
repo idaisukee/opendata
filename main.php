@@ -207,6 +207,14 @@ class Main
 		}
 		return $out;
 	}
+
+
+
+	public function geoPoint($lat, $long, $radius)
+	{
+		$geo_point = $lat.','.$long.','.'wgs84'.','.$radius;
+		return $geo_point;
+	}
 }
 //echo Main::stationCand('35.6783055555556,139.770441666667,00');
 $koyamachi = '34.972937,138.384326,tokyo,300';
