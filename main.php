@@ -68,8 +68,12 @@ class Main
 				'language' => 'jp',
 			],
 		];
-		$response = $client->request('GET', $str, $param);
-		return $response->getBody();
+		try {
+			$response = $client->request('GET', $str, $param);
+			return $response->getBody();
+		} catch (Exception $e) {
+			echo 'err at path', $e->getMessage(), "\n";
+		}
 	}
 
 
@@ -90,8 +94,12 @@ class Main
 				'language' => 'jp',
 			],
 		];
-		$response = $client->request('GET', $str, $param);
-		return $response->getBody();
+		try {
+			$response = $client->request('GET', $str, $param);
+			return $response->getBody();
+		} catch (Exception $e) {
+			echo 'err', $e->getMessage(), "\n";
+		}
 	}
 
 
@@ -109,8 +117,12 @@ class Main
 				'geoPoint' => $geo_point,
 			]
 		];
-		$response = $client->request('GET', $str, $param);
-		return $response->getBody();
+		try {
+			$response = $client->request('GET', $str, $param);
+			return $response->getBody();
+		} catch (Exception $e) {
+			echo 'err at stationCand', $e->getMessage(), "\n";
+		}
 	}
 
 
