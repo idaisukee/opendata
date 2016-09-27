@@ -26,6 +26,13 @@ class Util
 class Main
 {
 
+	public function main($lat, $long)
+	{
+		$geo_point = self::geoPoint($lat, $long);
+	}
+
+
+
 	// get json
 
 	// 経路探索
