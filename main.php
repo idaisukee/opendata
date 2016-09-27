@@ -227,7 +227,7 @@ $b = [888033, 887544];
 $e = Main::paths($a, $b, $date, $time);
 // print_r($e);
 $f = Main::trimPaths($e);
-print_r($f);
+//print_r($f);
 //echo $p;
 //$a = json_decode($p, false);
 //print_r( $a);
