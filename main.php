@@ -315,6 +315,31 @@ class Main
 
 
 
+	public function format(array $trimmed_paths)
+	{
+		foreach ($trimmed_paths as $i => $paths_with_point_pair) {
+			foreach ($paths_with_point_pair as $j => $path) {
+				$price = $path[0];
+				$time = (int) $path[1] + (int) $path[2];
+				$lines = $path[3];
+				$points = $path[4];
+
+				$combined = Util::combine($lines, $points);
+				$str
+					=
+					$price.' '.$time.
+					
+						 
+			}
+		}
+	}
+
+
+
+
+
+			
+			
 	public function trimStationCand($station_cand)
 	{
 		$station_cand_obj = json_decode($station_cand, false);
