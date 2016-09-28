@@ -55,31 +55,6 @@
         marker.setPosition(aaa);
       }
 
-      function myListener1(event) {
-        var lat = event.latLng.lat();
-        var lng = event.latLng.lng();
-        document.getElementById("show_s_lat").innerHTML = lat;
-        document.getElementById("show_s_lng").innerHTML = lng;
-        
-        var latlng = new google.maps.LatLng(lat, lng);
-//        var str = latlng.toJSON();
-        document.getElementById("s_latlng").innerHTML = str;
-        marker1.setPosition(latlng);
-        document.getElementById("s_lat").value = lat;
-      }
-
-
-      function myListener2(event) {
-        var lat = event.latLng.lat();
-        var lng = event.latLng.lng();
-        document.getElementById("e_lat").innerHTML = lat;
-        document.getElementById("e_lng").innerHTML = lng;
-        latlng = new google.maps.LatLng(lat, lng);
-        marker2.setPosition(latlng);
-      }
-
-
-
 
       function initMap1() {
         var map1;
