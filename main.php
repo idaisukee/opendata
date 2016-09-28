@@ -91,7 +91,9 @@ class Main
 			$paths = self::paths($start_list, $end_list, $date, $time);
 
 			$trimmed = self::trimPaths($paths);
-			return $trimmed;
+			$formatted = self::format($trimmed);
+			// return $trimmed;
+			return $formatted;
 		} catch (Exception $e) {
 			echo $e->getMessage();
 		} catch (NullPathException $e) {
@@ -317,9 +319,25 @@ class Main
 
 
 
+	public function flatten($combined)
+	{
+		$str = '';
+		foreach ($combined as $i => $pair) {
+			$str .= $pair[0];
+			$str .= $pair[1][0];
+			$str .= $pair[1][1];
+			$str .= $pair[1][2];
+		}
+		return $str;
+	}
+
+
+
 	public function format(array $trimmed_paths)
 	{
+		$out = [];
 		foreach ($trimmed_paths as $i => $paths_with_point_pair) {
+			$cell = [];
 			foreach ($paths_with_point_pair as $j => $path) {
 				$price = $path[0];
 				$time = (int) $path[1] + (int) $path[2];
@@ -327,21 +345,19 @@ class Main
 				$points = $path[4];
 
 				$combined = Util::combine($lines, $points);
-				$str = '';
-					// =
-					// $price.' '.$time.
-					
-						 
+				$flattend = self::flatten($combined);
+				$str
+					=
+					$price.' '.$time."\n".$flattend;
+				array_push($cell, $str);
 			}
+			array_push($out, $cell);
 		}
+		// return $combined;
+		return $out;
 	}
 
 
-
-
-
-			
-			
 	public function trimStationCand($station_cand)
 	{
 		$station_cand_obj = json_decode($station_cand, false);
