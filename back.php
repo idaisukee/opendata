@@ -1,3 +1,11 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Simple Map</title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+
 <?php
 require 'main.php';
 //require $_SERVER['DOCUMENT_ROOT'].'/open/main.php';
@@ -24,7 +32,7 @@ $end = json_decode($end_json, false);
  $time = '0830';
 
 $p = Main::proc($start_lat, $start_long, $end_lat, $end_long, $radius, $date, $time);
-print_r($p);
+//print_r($p);
 
 $start_lat = '34.972937';
 $start_long = '138.384326';
@@ -34,3 +42,14 @@ $end_long = '138.394326';
 
 $q  =Main::proc($start_lat, $start_long, $end_lat, $end_long, $radius, $date, $time);
 //print_r($q);
+
+foreach ($p as $i => $path_with_pair) {
+	foreach ($path_with_pair as $j => $path) {
+		echo $path."<br>";
+	}
+	echo '<hr>';
+}
+?>
+
+	</body>
+</html>
