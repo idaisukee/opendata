@@ -128,7 +128,7 @@ class Main
 		try {
 			$response = $client->request('GET', $str, $param);
 		} catch (Exception $e) {
-			throw new HttpException();
+			throw new HttpException('path');
 		}
 		$json =  $response->getBody();
 		$obj = json_decode($json, false);
@@ -160,7 +160,7 @@ class Main
 		try {
 			$response = $client->request('GET', $str, $param);
 		} catch (Exception $e) {
-			throw new HttpException();
+			throw new HttpException('station');
 		}
 		return $response->getBody();
 	}
@@ -183,7 +183,7 @@ class Main
 		try {
 			$response = $client->request('GET', $str, $param);
 		} catch (Exception $e) {
-			throw new HttpException();
+			throw new HttpException('cand');
 		}
 		$json = $response->getBody();
 		$obj = json_decode($json, false);
