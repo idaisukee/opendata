@@ -19,7 +19,7 @@
   <body>
 
     <div class="map" id="map1"></div>
-    <div id="test">aa</div>
+    <div id="start">aa</div>
 
     <div class="map" id="map2"></div>
     <div id="end">bb</div>
@@ -68,8 +68,8 @@
         var marker = new google.maps.Marker(markerOpts);
 
         var str = init_center.toString();
-        document.getElementById("test").innerHTML = str;
-        google.maps.event.addListener(map1, 'click', function(event) {  listener(event, marker, 'test');});
+        document.getElementById("start").innerHTML = str;
+        google.maps.event.addListener(map1, 'click', function(event) {  listener(event, marker, 'start');});
 
       }
 
