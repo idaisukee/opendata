@@ -25,6 +25,22 @@ class Util
 
 
 
+	public function combine(array $lines, array $points)
+	{
+		$count = count($points);
+		$out = [];
+		foreach ($points as $i => $point) {
+			$start = $point;
+			if (isset ($lines[$i])) {
+				$line = $lines[$i];
+			} else {
+				$line = null;
+			}
+			array_push($out, [$start, $line]);
+		}
+		return $out;
+	}
+
 class HttpException extends Exception
 {
 	public function __construct()
