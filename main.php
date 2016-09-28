@@ -74,10 +74,17 @@ class Main
 		];
 		try {
 			$response = $client->request('GET', $str, $param);
-			return $response->getBody();
+			$json =  $response->getBody();
+			$obj = json_decode($json, false);
+			if (isset($obj->ResultSet->Course)) {
+				return $json;
+			} else {
+				throw new Exception('path is null.');
+			}
 		} catch (Exception $e) {
-			echo 'err at path', $e->getMessage(), "\n";
+			echo 'err at path: ', $e->getMessage(), "\n";
 		}
+
 	}
 
 
@@ -123,15 +130,15 @@ class Main
 		];
 		try {
 			$response = $client->request('GET', $str, $param);
-			$json = $response->getBody();
-			$obj = json_decode($json, false);
-			if (isset($obj->ResultSet->Point)) {
-				return $json;
-			} else {
-				throw new Exception('cand is null.');
-			}
 		} catch (Exception $e) {
 			echo 'err at stationCand: ', $e->getMessage(), "\n";
+		}
+		$json = $response->getBody();
+		$obj = json_decode($json, false);
+		if (isset($obj->ResultSet->Point)) {
+			return $json;
+		} else {
+			throw new Exception('cand is null.');
 		}
 	}
 
