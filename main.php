@@ -73,7 +73,7 @@ class NullPathException extends Exception
 class Main
 {
 
-	const TIMEOUT = 2.0;
+	const TIMEOUT = 12.0;
 
 	public function proc($start_lat, $start_long, $end_lat, $end_long, $radius, $date, $time)
 	{
@@ -113,7 +113,7 @@ class Main
 	{
 		$client = new Client([
 			'base_uri' => 'http://api.ekispert.jp/v1/json/',
-			'timeout'  => TIMEOUT,
+			'timeout'  => self::TIMEOUT,
 		]);
 		$str
 			=
@@ -147,7 +147,7 @@ class Main
 	{
 		$client = new Client([
 			'base_uri' => 'http://api.ekispert.jp/v1/json/',
-			'timeout'  => TIMEOUT,
+			'timeout'  => self::TIMEOUT,
 		]);
 
 		$str = 'station';
@@ -173,7 +173,7 @@ class Main
 	{
 		$client = new Client([
 			'base_uri' => 'http://api.ekispert.jp/v1/json/',
-			'timeout'  => TIMEOUT,
+			'timeout'  => self::TIMEOUT,
 		]);
 		$str = 'geo/station';
 		$param = [
