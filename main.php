@@ -40,12 +40,12 @@ class Util
 		}
 		return $out;
 	}
-
+}
 class HttpException extends Exception
 {
-	public function __construct()
+	public function __construct($place = null)
 	{
-		parent::__construct('Http fail.', 0);
+		parent::__construct('Http fail.'.$place, 0);
 	}
 }
 
