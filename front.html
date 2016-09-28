@@ -53,9 +53,8 @@
 
 
       function initMap1() {
-        var map1;
 
-        map1 = new google.maps.Map(document.getElementById('map1'), {
+        var map1 = new google.maps.Map(document.getElementById('map1'), {
           center: station_json,
           zoom: 14
         });
@@ -68,10 +67,7 @@
 
         var marker = new google.maps.Marker(markerOpts);
 
-        var lat = init_center.lat();
-        var lng = init_center.lng();
-        var latlng = new google.maps.LatLng(lat, lng)
-        var str = latlng.toJSON;
+        var str = init_center.toString();
         document.getElementById("test").innerHTML = str;
         google.maps.event.addListener(map1, 'click', function(event) {  listener(event, marker, 'test');});
 
@@ -80,25 +76,21 @@
 
 
       function initMap2() {
-        var map2;
 
-        map2 = new google.maps.Map(document.getElementById('map2'), {
+        var map2 = new google.maps.Map(document.getElementById('map2'), {
           center: station_json,
           zoom: 14
         });
-//        google.maps.event.addListener(map2, 'click', function(event) {  listener(event, 'end'); });
         var init_center = map2.getCenter();
         var markerOpts = {
           position: init_center,
           map: map2,
           title: "marker test"
         };
-
-        marker = new google.maps.Marker(markerOpts);
+        var marker = new google.maps.Marker(markerOpts);
+        var str = init_center.toString();
+        document.getElementById("end").innerHTML = str;
         google.maps.event.addListener(map2, 'click', function(event) {  listener(event, marker, 'end');});
-
-        var lat = init_center.lat();
-        var lng = init_center.lng();
 
       }
 
