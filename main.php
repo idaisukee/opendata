@@ -21,7 +21,7 @@ class Util
 		}
 		return $prod;
 	}
-}
+
 
 
 
@@ -327,9 +327,9 @@ class Main
 				$points = $path[4];
 
 				$combined = Util::combine($lines, $points);
-				$str
-					=
-					$price.' '.$time.
+				$str = '';
+					// =
+					// $price.' '.$time.
 					
 						 
 			}
