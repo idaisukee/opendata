@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Map</title>
+    <meta charset="utf-8">
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      .map {
+        height: 40%;
+        width: 30%;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <div class="map" id="map1"></div>
+    <div id="test">aa</div>
+
+    <div class="map" id="map2"></div>
+    <div id="end">bb</div>
+    <form id="form" action="back.php" method="GET">
+      <input type="hidden" value="" name="s_lat" id="s_lat" />
+      <input type="hidden" value="" name="s_lng" />
+      <input type="hidden" value="" name="e_lat" />
+      <input type="hidden" value="" name="e_lng" />
+      <input type="submit" value="go">
+    </form>
+
+    <script>
+      function initMap() {
+        var station = new google.maps.LatLng(34.972937, 138.384326);
+        station_json = station.toJSON();
+        array = [];
+        initMap1();
+        initMap2();
+      }
+
+
+      function listener(event, marker, id) {
+        var lat_lng = event.latLng;
+        var str = lat_lng.toString();
+        document.getElementById(id).innerHTML = str;
+        var aaa = new google.maps.LatLng(34.982937, 138.384326);
+        marker.setPosition(lat_lng);
+
+      }
+
+      function mark(event, marker) {
+        var aaa = new google.maps.LatLng(34.982937, 138.384326);
+        marker.setPosition(aaa);
+      }
+
+      function myListener1(event) {
+        var lat = event.latLng.lat();
+        var lng = event.latLng.lng();
+        document.getElementById("show_s_lat").innerHTML = lat;
+        document.getElementById("show_s_lng").innerHTML = lng;
+        
+        var latlng = new google.maps.LatLng(lat, lng);
+//        var str = latlng.toJSON();
+        document.getElementById("s_latlng").innerHTML = str;
+        marker1.setPosition(latlng);
+        document.getElementById("s_lat").value = lat;
+      }
+
+
+      function myListener2(event) {
+        var lat = event.latLng.lat();
+        var lng = event.latLng.lng();
+        document.getElementById("e_lat").innerHTML = lat;
+        document.getElementById("e_lng").innerHTML = lng;
+        latlng = new google.maps.LatLng(lat, lng);
+        marker2.setPosition(latlng);
+      }
+
+
+
+
+      function initMap1() {
+        var map1;
+
+        map1 = new google.maps.Map(document.getElementById('map1'), {
+          center: station_json,
+          zoom: 14
+        });
+        var init_center = map1.getCenter();
+        var markerOpts = {
+          position: init_center,
+          map: map1,
+          title: "marker test"
+        };
+
+        var marker = new google.maps.Marker(markerOpts);
+
+        var lat = init_center.lat();
+        var lng = init_center.lng();
+        var latlng = new google.maps.LatLng(lat, lng)
+        var str = latlng.toJSON;
+        document.getElementById("test").innerHTML = str;
+        google.maps.event.addListener(map1, 'click', function(event) {  listener(event, marker, 'test');});
+
+      }
+
+
+
+      function initMap2() {
+        var map2;
+
+        map2 = new google.maps.Map(document.getElementById('map2'), {
+          center: station_json,
+          zoom: 14
+        });
+//        google.maps.event.addListener(map2, 'click', function(event) {  listener(event, 'end'); });
+        var init_center = map2.getCenter();
+        var markerOpts = {
+          position: init_center,
+          map: map2,
+          title: "marker test"
+        };
+
+        marker = new google.maps.Marker(markerOpts);
+        google.maps.event.addListener(map2, 'click', function(event) {  listener(event, marker, 'end');});
+
+        var lat = init_center.lat();
+        var lng = init_center.lng();
+
+      }
+
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD_-AT7Xnv1UfvLbQK-nSVXaWtLpU2-Y9A&callback=initMap"
+            async defer></script>
+    <!-- <button type="button" onclick="alert()" value="ho">
+         aa
+         </button> -->
+  </body>
+</html>
