@@ -23,6 +23,37 @@ class Util
 	}
 }
 
+
+
+class HttpException extends Exception
+{
+	public function __construct()
+	{
+		parent::__construct('Http fail.', 0);
+	}
+}
+
+
+class NullCandException extends Exception
+{
+	public function __construct()
+	{
+		parent::__construct('cand fail.', 0);
+	}
+}
+
+
+
+class NullPathException extends Exception
+{
+	public function __construct()
+	{
+		parent::__construct('path fail.', 0);
+	}
+}
+
+
+
 class Main
 {
 
@@ -44,6 +75,12 @@ class Main
 			$trimmed = self::trimPaths($paths);
 			return $trimmed;
 		} catch (Exception $e) {
+			echo $e->getMessage();
+		} catch (NullPathException $e) {
+			echo $e->getMessage();
+		} catch (NullCandException $e) {
+			echo $e->getMessage();
+		} catch (HttpException $e) {
 			echo $e->getMessage();
 		}
 		// return $paths;
@@ -74,17 +111,16 @@ class Main
 		];
 		try {
 			$response = $client->request('GET', $str, $param);
-			$json =  $response->getBody();
-			$obj = json_decode($json, false);
-			if (isset($obj->ResultSet->Course)) {
-				return $json;
-			} else {
-				throw new Exception('path is null.');
-			}
 		} catch (Exception $e) {
-			echo 'err at path: ', $e->getMessage(), "\n";
+			throw new HttpException();
 		}
-
+		$json =  $response->getBody();
+		$obj = json_decode($json, false);
+		if (isset($obj->ResultSet->Course)) {
+			return $json;
+		} else {
+			throw new NullPathException();
+		}
 	}
 
 
@@ -107,10 +143,10 @@ class Main
 		];
 		try {
 			$response = $client->request('GET', $str, $param);
-			return $response->getBody();
 		} catch (Exception $e) {
-			echo 'err', $e->getMessage(), "\n";
+			throw new HttpException();
 		}
+		return $response->getBody();
 	}
 
 
@@ -131,14 +167,14 @@ class Main
 		try {
 			$response = $client->request('GET', $str, $param);
 		} catch (Exception $e) {
-			echo 'err at stationCand: ', $e->getMessage(), "\n";
+			throw new HttpException();
 		}
 		$json = $response->getBody();
 		$obj = json_decode($json, false);
 		if (isset($obj->ResultSet->Point)) {
 			return $json;
 		} else {
-			throw new Exception('cand is null.');
+			throw new NullCandException();
 		}
 	}
 
