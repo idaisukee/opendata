@@ -78,6 +78,36 @@ class Main
 
 	const TIMEOUT = 12.0;
 
+
+
+	public function validate($start_lat, $start_long, $end_lat, $end_long, $radius, $date, $time)
+	{
+		if (
+			is_numeric($start_lat) and
+			is_numeric($start_long) and
+			is_numeric($end_lat) and
+			is_numeric($end_long) and
+			is_numeric($radius) and
+			ctype_digit($date) and
+			ctype_digit($time)
+		) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+
+
+	public function retry($start_lat, $start_long, $end_lat, $end_long, $radius, $date, $time)
+	{
+		$int_new_radius = (int) $radius + 100;
+		$new_radius = (string) $int_new_radius;
+		return self::proc($start_lat, $start_long, $end_lat, $end_long, $new_radius, $date, $time);
+	}
+
+
+
 	public function proc($start_lat, $start_long, $end_lat, $end_long, $radius, $date, $time)
 	{
 		try {
