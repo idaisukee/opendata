@@ -40,12 +40,15 @@ class Util
 		}
 		return $out;
 	}
+
+
+
 }
 class HttpException extends Exception
 {
 	public function __construct($place = null)
 	{
-		parent::__construct('Http fail.'.$place, 0);
+		parent::__construct('通信エラーが発生しました。( 発生箇所： '.$place.' )', 0);
 	}
 }
 
@@ -54,7 +57,7 @@ class NullCandException extends Exception
 {
 	public function __construct()
 	{
-		parent::__construct('cand fail.', 0);
+		parent::__construct('駅・停留所がみつかりませんでした。', 0);
 	}
 }
 
@@ -64,7 +67,7 @@ class NullPathException extends Exception
 {
 	public function __construct()
 	{
-		parent::__construct('path fail.', 0);
+		parent::__construct('経路がみつかりませんでした。', 0);
 	}
 }
 
@@ -135,7 +138,7 @@ class Main
 		try {
 			$response = $client->request('GET', $str, $param);
 		} catch (Exception $e) {
-			throw new HttpException('path');
+			throw new HttpException('経路探索');
 		}
 		$json =  $response->getBody();
 		$obj = json_decode($json, false);
@@ -167,7 +170,7 @@ class Main
 		try {
 			$response = $client->request('GET', $str, $param);
 		} catch (Exception $e) {
-			throw new HttpException('station');
+			throw new HttpException('駅名');
 		}
 		return $response->getBody();
 	}
@@ -190,7 +193,7 @@ class Main
 		try {
 			$response = $client->request('GET', $str, $param);
 		} catch (Exception $e) {
-			throw new HttpException('cand');
+			throw new HttpException('駅・停留所探索');
 		}
 		$json = $response->getBody();
 		$obj = json_decode($json, false);
