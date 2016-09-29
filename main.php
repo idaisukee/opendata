@@ -416,7 +416,9 @@ class Main
 			$station = $boarding[0];
 			$board_vehicle = $boarding[1][0];
 			$board_time = $boarding[1][1];
-			$str = '<tr><td>'.$station.'</td><td>'.$board_vehicle.'</td><td>'.$board_time.'</td></tr>';
+			$time_obj = strtotime($board_time);
+			$time_str = strftime('%H:%M', $time_obj);
+			$str = '<tr><td>'.$station.'</td><td>'.$board_vehicle.'</td><td>'.$time_str.'</td></tr>';
 			array_push($strs, $str);
 		}
 		$board_str = implode($strs, '<br />');
