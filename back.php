@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Simple Map</title>
+		<title>地図から路線検索 結果表示</title>
 		<meta charset="utf-8">
 <style>
 	html,body{
@@ -32,7 +32,7 @@
 </style>
 	</head>
 	<body>
-
+		<h1>地図から路線検索 結果表示</h1>
 		<?php
 			require 'main.php';
 			$g = $_GET;
@@ -46,14 +46,14 @@
 			$end_long = $end->lng;
 
 			$radius = $g['radius'];
+			$date = $g['date'];
+			$time = $g['time'];
 
-			$date = '20160603';
-			$time = '0830';
 			print '<p>出発日時 '.$date.' '.$time.'</p>';
 			print '<p>出発地点 ('.$start_lat.', '.$start_long.')</p>';
 			print '<p>到着地点 ('.$end_lat.', '.$end_long.')</p>';
 			print '<p>マーカーから '.$radius.' m 以内の駅・停留所を探索しました。</p>';
-			print '<p>結果は、所要時間の短い順です。</p>';
+			print '<p>結果は、乗車時間の短い順に表示します。</p>';
 			if (true === Main::validate($start_lat, $start_long, $end_lat, $end_long, $radius, $date, $time) ) {
 
 				$p = Main::proc($start_lat, $start_long, $end_lat, $end_long, $radius, $date, $time);

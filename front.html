@@ -1,32 +1,45 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Simple Map</title>
+    <title>地図から路線検索</title>
     <meta charset="utf-8">
     <style>
       html, body {
         height: 100%;
         margin: 0;
-        padding: 0;
+        padding: 1em;
       }
       .map {
         height: 40%;
-        width: 30%;
+        width: 45%;
+        margin: 1em;
       }
 
     </style>
   </head>
   <body>
 
-    <div class="map" id="map1"></div>
-    <div id="show_start">aa</div>
+    <h1>地図から路線検索</h1>
 
-    <div class="map" id="map2"></div>
-    <div id="show_end">bb</div>
-    <form id="form" action="back.php" method="GET">
+    <h2>出発地点</h2>
+    <p>希望の地点をクリックしてマーカーを置いてください。</p>
+
+      <div class="map" id="map1"></div>
+      <p>マーカーの緯度・経度: <span id="show_start"></span></p>
+
+      <h2>到着地点</h2>
+      <p>希望の地点をクリックしてマーカーを置いてください。</p>
+
+
+      <div class="map" id="map2"></div>
+      <p>マーカーの緯度・経度: <span id="show_end"></span></p>
+
+      <form id="form" action="back.php" method="GET">
       <input type="hidden" value="" name="start" id="start" />
-      <input type="hidden" value="" name="end" id="end"/>
-      <input type="text" value="300" label="半径" name="radius" id="radius"/>
+      <input type="hidden" value="" name="end" id="end" />
+      <p>マーカーから <input type="text" value="300" label="半径" name="radius" id="radius" /> m 以内にある駅・停留所を探索</p>
+      <p>出発日: <input type="text" value="20161025" name="date" id="date" /> ( 8 桁の半角数字で入力してください。 )</p>
+      <p>出発時刻: <input type="text" value="0905" name="time" id="time" /> ( 4 桁の半角数字で入力してください。 )</p>
       <input type="submit" value="go">
     </form>
 
@@ -34,10 +47,17 @@
       function initMap() {
 //        var station = new google.maps.LatLng(34.972937, 138.384326);
         var station = new google.maps.LatLng(43.068699667379995, 141.35052680969238);
+        var clocktower = new google.maps.LatLng(43.062617236759834, 141.35361671447754);
         station_json = station.toJSON();
+        clocktower_json = clocktower.toJSON();
         array = [];
         initMap1();
         initMap2();
+      }
+
+
+      function modForm(form_id, form_value) {
+        document.getElementById(form_id).value = form_value;
       }
 
 
@@ -52,8 +72,9 @@
         var form_id = hash[id];
         var form_value = JSON.stringify(lat_lng.toJSON());
         document.getElementById(id).innerHTML = str;
-        document.getElementById(form_id).value = form_value;
+        modForm(form_id, form_value);
       }
+
 
 
 
@@ -67,7 +88,7 @@
         var markerOpts = {
           position: init_center,
           map: map1,
-          title: "marker test"
+          title: "出発地点"
         };
 
         var marker = new google.maps.Marker(markerOpts);
@@ -75,7 +96,8 @@
         var str = init_center.toString();
         document.getElementById("show_start").innerHTML = str;
         google.maps.event.addListener(map1, 'click', function(event) {  listener(event, marker, 'show_start');});
-
+        var form_value = JSON.stringify(init_center.toJSON());
+        modForm('start', form_value)
       }
 
 
@@ -83,27 +105,26 @@
       function initMap2() {
 
         var map2 = new google.maps.Map(document.getElementById('map2'), {
-          center: station_json,
+          center: clocktower_json,
           zoom: 14
         });
         var init_center = map2.getCenter();
         var markerOpts = {
           position: init_center,
           map: map2,
-          title: "marker test"
+          title: "到着地点"
         };
         var marker = new google.maps.Marker(markerOpts);
         var str = init_center.toString();
         document.getElementById("show_end").innerHTML = str;
         google.maps.event.addListener(map2, 'click', function(event) {  listener(event, marker, 'show_end');});
+        var form_value = JSON.stringify(init_center.toJSON());
+        modForm('end', form_value)
 
       }
 
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD_-AT7Xnv1UfvLbQK-nSVXaWtLpU2-Y9A&callback=initMap"
             async defer></script>
-    <!-- <button type="button" onclick="alert()" value="ho">
-         aa
-         </button> -->
   </body>
 </html>
