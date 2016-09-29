@@ -129,11 +129,7 @@ class Main
 			$uptakens = array_map('self::uptake_combined', $sorted);
 			$formatted = array_map('self::format', $uptakens);
 			$out = $formatted;
-			// $out = $uptakens;
 			return $out;
-			//			$formatted = self::format($trimmed);
-			// return $trimmed;
-			// return $formatted;
 		} catch (Exception $e) {
 			echo $e->getMessage();
 		} catch (NullPathException $e) {
