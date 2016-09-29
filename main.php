@@ -122,8 +122,10 @@ class Main
 			$end_list = self::stationCandList($end_geo_point);
 
 			$paths = self::paths($start_list, $end_list, $date, $time);
-
-			$trimmed = self::trimPaths($paths);
+			$nonnull_paths = _::reject($paths, function($value) {
+				return null === $value;
+			});
+			$trimmed = self::trimPaths($nonnull_paths);
 			$unbound = self::unbind($trimmed);
 			$sorted = self::sort($unbound);
 			$uptakens = array_map('self::uptake_combined', $sorted);
@@ -168,7 +170,7 @@ class Main
 		try {
 			$response = $client->request('GET', $str, $param);
 		} catch (Exception $e) {
-			throw new HttpException('経路探索');
+			return null;
 		}
 		$json =  $response->getBody();
 		$obj = json_decode($json, false);
@@ -268,10 +270,11 @@ class Main
 			$via_list = implode($cell, ':');
 			$path_json = self::path($via_list, $date, $time);
 			if (null === $path_json) {
-				return null;
+				$paths[$k] = null;
+			} else {
+				$path_obj = json_decode($path_json, false);
+				$paths[$k] = $path_obj;
 			}
-			$path_obj = json_decode($path_json, false);
-			$paths[$k] = $path_obj;
 		}
 		return $paths;
 	}
