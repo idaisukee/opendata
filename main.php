@@ -142,8 +142,8 @@ class Main
 			echo $e->getMessage();
 		} catch (HttpException $e) {
 			echo $e->getMessage();
+			return self::retry($start_lat, $start_long, $end_lat, $end_long, $radius, $date, $time);
 		}
-		// return $paths;
 	}
 
 
