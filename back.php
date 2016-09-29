@@ -12,17 +12,22 @@
 	}
 
 	div.path {
-		margin-bottom: 10em;
+		margin-bottom: 5em;
 		border: solid 2px;
 	}
 
 	table {
 		margin: 2em;
 		margin-top: 0em;
+		padding-top: 0em;
 	}
 
-	tr {
+	th, td {
 		border: solid 1px;
+	}
+
+	p {
+		margin-left: 2em;
 	}
 </style>
 	</head>
@@ -40,11 +45,15 @@
 			$end_lat =  $end->lat;
 			$end_long = $end->lng;
 
-			$radius = '300';
+			$radius = $g['radius'];
 
 			$date = '20160603';
 			$time = '0830';
-
+			print '<p>出発日時 '.$date.' '.$time.'</p>';
+			print '<p>出発地点 ('.$start_lat.', '.$start_long.')</p>';
+			print '<p>到着地点 ('.$end_lat.', '.$end_long.')</p>';
+			print '<p>マーカーから '.$radius.' m 以内の駅・停留所を探索しました。</p>';
+			print '<p>結果は、所要時間の短い順です。</p>';
 			if (true === Main::validate($start_lat, $start_long, $end_lat, $end_long, $radius, $date, $time) ) {
 
 				$p = Main::proc($start_lat, $start_long, $end_lat, $end_long, $radius, $date, $time);
