@@ -136,6 +136,9 @@ class Main
 			$nonnull_paths = _::reject($paths, function($value) {
 				return null === $value;
 			});
+			if (0 === count($nonnull_paths)) {
+				throw new Exception('ご指定の条件では、経路がみつかりませんでした。条件の変更をお願いします。');
+			}
 			$trimmed = self::trimPaths($nonnull_paths);
 			$unbound = self::unbind($trimmed);
 			$sorted = self::sort($unbound);
@@ -369,8 +372,12 @@ class Main
 
 	public function trimPaths(array $paths)
 	{
-		$out = array_map('self::trimPath', $paths);
-		return $out;
+		if (null === $paths) {
+			return null;
+		} else {
+			$out = array_map('self::trimPath', $paths);
+			return $out;
+		}
 	}
 
 
@@ -390,36 +397,49 @@ class Main
 
 	public function sort($unbound)
 	{
-		$sorted = _::sort($unbound, function($path) {
-			return (int) $path[1] + (int) $path[2];
-		});
-		return $sorted;
+		if (null === $unbound) {
+			return null;
+		} else {
+			$sorted = _::sort($unbound, function($path) {
+				return (int) $path[1] + (int) $path[2];
+			});
+			return $sorted;
+		}
 	}
 
 
 
 	public function unbind(array $trimmed_paths)
 	{
-		$out = [];
-		foreach ($trimmed_paths as $i => $paths_with_point_pair) {
-			foreach ($paths_with_point_pair as $j => $path) {
-				array_push($out, $path);
+
+		if (null === $trimmed_paths) {
+			return null;
+		} else {
+			$out = [];
+			foreach ($trimmed_paths as $i => $paths_with_point_pair) {
+				foreach ($paths_with_point_pair as $j => $path) {
+					array_push($out, $path);
+				}
 			}
+			return $out;
 		}
-		return $out;
 	}
 
 
 
 	public function uptake_combined(array $path)
 	{
-		$price = $path[0];
-		$time = (int) $path[1] + (int) $path[2];
-		$lines = $path[3];
-		$points = $path[4];
+		if (null === $path) {
+			return null;
+		} else {
+			$price = $path[0];
+			$time = (int) $path[1] + (int) $path[2];
+			$lines = $path[3];
+			$points = $path[4];
 
-		$combined = Util::combine($lines, $points);
-		return [$price, $time, $combined];
+			$combined = Util::combine($lines, $points);
+			return [$price, $time, $combined];
+		}
 	}
 
 
