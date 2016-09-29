@@ -485,8 +485,7 @@ class Main
 		} else {
 			throw new Exception('cand is null.');
 		}
-		// return $out;
-		return $station_cand_obj;
+		return $out;
 	}
 
 
