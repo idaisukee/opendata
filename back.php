@@ -16,7 +16,14 @@
 		border: solid 2px;
 	}
 
+	table {
+		margin: 2em;
+		margin-top: 0em;
+	}
 
+	tr {
+		border: solid 1px;
+	}
 </style>
 	</head>
 	<body>
