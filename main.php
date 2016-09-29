@@ -440,18 +440,26 @@ class Main
 			} else {
 				$board_vehicle_cell = '( 到着 )';
 			}
-			$board_time = $boarding[1][1];
-			if (isset($board_time)) {
-				$time_obj = strtotime($board_time);
-				$time_str = strftime('%H:%M', $time_obj);
+			$on_board_time = $boarding[1][2];
+			$off_board_time = $boarding[1][1];
+			if (isset($on_board_time)) {
+				$on_time_obj = strtotime($on_board_time);
+				$on_time_str = strftime('%H:%M', $on_time_obj);
 			} else {
-				$time_str = '';
+				$on_time_str = '';
 			}
-			$str = '<tr><td>'.$station.'</td><td>'.$board_vehicle_cell.'</td><td>'.$time_str.'</td></tr>';
+			if (isset($off_board_time)) {
+				$off_time_obj = strtotime($off_board_time);
+				$off_time_str = strftime('%H:%M', $off_time_obj);
+			} else {
+				$off_time_str = '';
+			}
+
+			$str = '<tr><td>'.$station.'</td><td>'.$board_vehicle_cell.'</td><td>'.$on_time_str.'</td><td>'.$off_time_str.'</td></tr>';
 			array_push($strs, $str);
 		}
 		$board_str = implode($strs, ' ');
-		$out = '<div class="path"><p>片道 '.$price.' 円</p><p>'.$time.' 分</p><table><tr><th>駅・停留所</th><th>路線</th><th>乗車時刻</th></tr>'.$board_str.'</table></div>';
+		$out = '<div class="path"><p>片道 '.$price.' 円</p><p>'.$time.' 分</p><table><tr><th>駅・停留所</th><th>路線</th><th>乗車時刻</th><th>降車時刻</th></tr>'.$board_str.'</table></div>';
 		return $out;
 	}
 
