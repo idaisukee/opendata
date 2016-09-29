@@ -395,29 +395,39 @@ class Main
 
 
 
-	public function format(array $trimmed_paths)
+	public function uptake_combined(array $path)
+	{
+		$price = $path[0];
+		$time = (int) $path[1] + (int) $path[2];
+		$lines = $path[3];
+		$points = $path[4];
+
+		$combined = Util::combine($lines, $points);
+		return [$price, $time, $combined];
+	}
+
+
+
+	public function format(array $uptaken)
 	{
 		$out = [];
-		foreach ($trimmed_paths as $i => $paths_with_point_pair) {
-			$cell = [];
-			foreach ($paths_with_point_pair as $j => $path) {
-				$price = $path[0];
-				$time = (int) $path[1] + (int) $path[2];
-				$lines = $path[3];
-				$points = $path[4];
-
-				$combined = Util::combine($lines, $points);
-				$flattend = self::flatten($combined);
-				$str
-					=
-					$price.' '.$time."\n".$flattend;
-				array_push($cell, $str);
-			}
-			array_push($out, $cell);
+		$price = $uptaken[0];
+		$time = $uptaken[1];
+		$boardings = $uptaken[2];
+		// return $uptaken;
+		$strs = [];
+		foreach ($boardings as $k => $boarding) {
+			$station = $boarding[0];
+			$board_vehicle = $boarding[1][0];
+			$board_time = $boarding[1][1];
+			$str = $station.' '.$board_vehicle.' '.$board_time;
+			array_push($strs, $str);
 		}
-		// return $combined;
+		$board_str = implode($strs, '<br />');
+		$out = $price.'<br />'.$time.'<br />'.$board_str.'<hr />';
 		return $out;
 	}
+
 
 
 	public function trimStationCand($station_cand)
