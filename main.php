@@ -175,7 +175,7 @@ class Main
 		if (isset($obj->ResultSet->Course)) {
 			return $json;
 		} else {
-			throw new NullPathException();
+			return null;
 		}
 	}
 
@@ -267,6 +267,9 @@ class Main
 		foreach ($prod as $k => $cell) {
 			$via_list = implode($cell, ':');
 			$path_json = self::path($via_list, $date, $time);
+			if (null === $path_json) {
+				return null;
+			}
 			$path_obj = json_decode($path_json, false);
 			$paths[$k] = $path_obj;
 		}
@@ -300,6 +303,9 @@ class Main
 
 	public function trimPath($path_obj)
 	{
+		if (null === $path_obj) {
+			return null;
+		}
 		$the_course = $path_obj->ResultSet->Course;
 		$coures_num = count($the_course);
 		if (1 === $coures_num) {
