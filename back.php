@@ -3,6 +3,21 @@
 	<head>
 		<title>Simple Map</title>
 		<meta charset="utf-8">
+<style>
+	html,body{
+		height:100%;
+		margin:10px;
+		padding:0;
+
+	}
+
+	div.path {
+		margin-bottom: 10em;
+		border: solid 2px;
+	}
+
+
+</style>
 	</head>
 	<body>
 

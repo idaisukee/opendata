@@ -416,11 +416,11 @@ class Main
 			$station = $boarding[0];
 			$board_vehicle = $boarding[1][0];
 			$board_time = $boarding[1][1];
-			$str = $station.' '.$board_vehicle.' '.$board_time;
+			$str = '<tr><td>'.$station.'</td><td>'.$board_vehicle.'</td><td>'.$board_time.'</td></tr>';
 			array_push($strs, $str);
 		}
 		$board_str = implode($strs, '<br />');
-		$out = $price.'<br />'.$time.'<br />'.$board_str.'<hr />';
+		$out = '<div class="path"><p>片道 '.$price.' 円</p><p>'.$time.' 分</p><table>'.$board_str.'</table></div>';
 		return $out;
 	}
 
