@@ -25,8 +25,8 @@
 
 			if (true === Main::validate($start_lat, $start_long, $end_lat, $end_long, $radius, $date, $time) ) {
 
-				Main::proc($start_lat, $start_long, $end_lat, $end_long, $radius, $date, $time) )
-
+				$p = Main::proc($start_lat, $start_long, $end_lat, $end_long, $radius, $date, $time);
+				print_r($p);
 			} else {
 				print 'validation error.';
 			}
