@@ -91,9 +91,12 @@ class Main
 			$paths = self::paths($start_list, $end_list, $date, $time);
 
 			$trimmed = self::trimPaths($paths);
-			$formatted = self::format($trimmed);
+			$unbound = self::unbind($trimmed);
+			$sorted = self::sort($unbound);
+			return $sorted;
+			//			$formatted = self::format($trimmed);
 			// return $trimmed;
-			return $formatted;
+			// return $formatted;
 		} catch (Exception $e) {
 			echo $e->getMessage();
 		} catch (NullPathException $e) {
@@ -329,6 +332,28 @@ class Main
 			$str .= $pair[1][2];
 		}
 		return $str;
+	}
+
+
+	public function sort($unbound)
+	{
+		$sorted = _::sort($unbound, function($path) {
+			return (int) $path[1] + (int) $path[2];
+		});
+		return $sorted;
+	}
+
+
+
+	public function unbind(array $trimmed_paths)
+	{
+		$out = [];
+		foreach ($trimmed_paths as $i => $paths_with_point_pair) {
+			foreach ($paths_with_point_pair as $j => $path) {
+				array_push($out, $path);
+			}
+		}
+		return $out;
 	}
 
 
