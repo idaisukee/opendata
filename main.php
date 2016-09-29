@@ -77,7 +77,7 @@ class Main
 {
 
 	const TIMEOUT = 12.0;
-
+	const LIMIT = 4;
 
 
 	public function validate($start_lat, $start_long, $end_lat, $end_long, $radius, $date, $time)
@@ -115,13 +115,24 @@ class Main
 			$start_station_cand = self::stationCand($start_geo_point);
 			$start_trimmed = self::trimStationCand($start_station_cand);
 			$start_list = self::stationCandList($start_geo_point);
+			$sorted_start_list = _::sort($start_list, function($cell) {
+				$distance = $cell[1];
+				return $distance;
+			});
+			$limited_start_list = _::first($sorted_start_list, self::LIMIT);
+
 
 			$end_geo_point = self::geoPoint($end_lat, $end_long, $radius);
 			$end_station_cand = self::stationCand($end_geo_point);
 			$end_trimmed = self::trimStationCand($end_station_cand);
 			$end_list = self::stationCandList($end_geo_point);
+			$sorted_end_list = _::sort($end_list, function($cell) {
+				$distance = $cell[1];
+				return $distance;
+			});
+			$limited_end_list = _::first($sorted_end_list, self::LIMIT);
 
-			$paths = self::paths($start_list, $end_list, $date, $time);
+			$paths = self::paths($limited_start_list, $limited_end_list, $date, $time);
 			$nonnull_paths = _::reject($paths, function($value) {
 				return null === $value;
 			});
