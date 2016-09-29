@@ -127,8 +127,8 @@ class Main
 			$unbound = self::unbind($trimmed);
 			$sorted = self::sort($unbound);
 			$uptakens = array_map('self::uptake_combined', $sorted);
-						$formatted = array_map('self::format', $uptakens);
-						$out = $formatted;
+			$formatted = array_map('self::format', $uptakens);
+			$out = $formatted;
 			// $out = $uptakens;
 			return $out;
 			//			$formatted = self::format($trimmed);
