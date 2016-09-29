@@ -57,6 +57,7 @@
 			if (true === Main::validate($start_lat, $start_long, $end_lat, $end_long, $radius, $date, $time) ) {
 
 				$p = Main::proc($start_lat, $start_long, $end_lat, $end_long, $radius, $date, $time);
+				print '<p>結果は '.count($p).' 件です。';
 				foreach ($p as $i => $path) {
 					print $path;
 				}
