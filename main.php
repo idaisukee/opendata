@@ -478,7 +478,7 @@ class Main
 			array_push($strs, $str);
 		}
 		$board_str = implode($strs, ' ');
-		$out = '<div class="path"><p>片道 '.$price.' 円</p><p>'.$time.' 分</p><table><tr><th>駅・停留所</th><th>路線</th><th>乗車時刻</th><th>降車時刻</th></tr>'.$board_str.'</table></div>';
+		$out = '<div class="path"><p>片道 '.$price.' 円</p><p>乗車時間: '.$time.' 分</p><table><tr><th>駅・停留所</th><th>路線</th><th>乗車時刻</th><th>降車時刻</th></tr>'.$board_str.'</table></div>';
 		return $out;
 	}
 
